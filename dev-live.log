@@ -1,0 +1,1793 @@
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 10.7s
+ ○ Compiling /auth/login ...
+ ✓ Compiled /auth/login in 15.1s (476 modules)
+ GET /auth/login 200 in 16150ms
+ ○ Compiling /admin/kyc ...
+ ✓ Compiled /admin/kyc in 17.2s (509 modules)
+ GET /admin/kyc 200 in 17649ms
+ ○ Compiling /client/withdrawals ...
+ ✓ Compiled /client/withdrawals in 750ms (497 modules)
+ GET /client/withdrawals 200 in 1026ms
+ ○ Compiling /admin/clients/[id] ...
+ ✓ Compiled /admin/clients/[id] in 1050ms (506 modules)
+ GET /admin/clients/1 200 in 2663ms
+ ○ Compiling / ...
+ ✓ Compiled / in 33.8s (1252 modules)
+ GET / 200 in 36393ms
+ ✓ Compiled in 9.3s (1266 modules)
+ ✓ Compiled in 4.9s (1266 modules)
+ ✓ Compiled in 3.1s (651 modules)
+ GET / 200 in 1967ms
+ ○ Compiling /_not-found ...
+ GET / 200 in 6863ms
+ ✓ Compiled /_not-found in 110.3s (1255 modules)
+ ✓ Compiled in 28.3s (1267 modules)
+ ○ Compiling /_error ...
+ GET / 500 in 103470ms
+ ✓ Compiled /_error in 6.2s (1491 modules)
+ ○ Compiling /_not-found ...
+ GET / 200 in 2396ms
+ ✓ Compiled /_not-found in 4.6s (1480 modules)
+ GET /_next/static/css/app/layout.css?v=1780463286451 404 in 2853ms
+ GET /_next/static/chunks/main-app.js?v=1780463286451 404 in 2226ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 2188ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 5s (1479 modules)
+ GET / 500 in 6024ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1603ms (1482 modules)
+ GET /_next/static/chunks/fallback/webpack.js 500 in 1898ms
+ GET /_next/static/chunks/fallback/main.js 500 in 1896ms
+ GET /_next/static/chunks/fallback/react-refresh.js 500 in 1895ms
+ GET /_next/static/chunks/fallback/pages/_error.js 500 in 1111ms
+ GET /_next/static/chunks/fallback/pages/_app.js 500 in 1109ms
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 20.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 50.6s (1245 modules)
+ GET / 200 in 19459ms
+ GET / 200 in 13922ms
+ ○ Compiling /auth/login ...
+ ✓ Compiled /admin/clients/[id] in 62.2s (1257 modules)
+ GET /admin/clients/1 200 in 24839ms
+ ○ Compiling /client/withdrawals ...
+ ✓ Compiled /client/withdrawals in 4.8s (1282 modules)
+ GET /client/withdrawals 200 in 5354ms
+ ○ Compiling /markets ...
+ ✓ Compiled /markets in 13.2s (1312 modules)
+ GET /markets 200 in 34260ms
+ ○ Compiling /trade ...
+ ✓ Compiled /trade in 6.9s (1286 modules)
+ GET /trade 200 in 8813ms
+ ○ Compiling /auth/login ...
+ ✓ Compiled /auth/login in 10.4s (643 modules)
+ GET /auth/login 200 in 11202ms
+ GET / 200 in 3590ms
+ GET /auth/login 200 in 371ms
+ GET / 200 in 250ms
+ GET / 200 in 489ms
+ GET / 200 in 3146ms
+ GET /auth/login 200 in 544ms
+ GET / 200 in 411ms
+ GET /auth/login 200 in 329ms
+ ○ Compiling /api/crm/login ...
+ ✓ Compiled /api/crm/login in 4.7s (674 modules)
+ POST /api/crm/login 401 in 5144ms
+ POST /api/crm/login 401 in 69ms
+ POST /api/crm/login 401 in 67ms
+ POST /api/crm/login 401 in 172ms
+ GET /auth/login 200 in 344ms
+ POST /api/crm/login 401 in 66ms
+ POST /api/crm/login 200 in 64ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 1795ms (1339 modules)
+ GET /admin 200 in 2332ms
+ ○ Compiling /api/crm/live-markets ...
+ ✓ Compiled /api/crm/live-markets in 995ms (691 modules)
+ GET /api/crm/live-markets 200 in 1331ms
+ GET /api/crm/live-markets 200 in 1334ms
+ GET /api/crm/live-markets 200 in 54ms
+ GET /api/crm/live-markets 200 in 57ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 46ms
+ ○ Compiling /admin/approvals ...
+ ✓ Compiled /admin/approvals in 1887ms (1343 modules)
+ GET /api/crm/live-markets 200 in 1336ms
+ GET /admin/approvals 200 in 2201ms
+ ○ Compiling /api/crm/admin/approvals ...
+ ✓ Compiled /api/crm/admin/approvals in 670ms (695 modules)
+ GET /api/crm/admin/approvals 200 in 932ms
+ GET /api/crm/admin/approvals 200 in 940ms
+ PATCH /api/crm/admin/approvals 200 in 40ms
+ GET /api/crm/admin/approvals 200 in 41ms
+ ○ Compiling /admin/kyc ...
+ ✓ Compiled /admin/kyc in 1161ms (1330 modules)
+ GET /admin/kyc 200 in 1425ms
+ ○ Compiling /admin/deposits ...
+ ✓ Compiled /admin/deposits in 1037ms (1330 modules)
+ GET /admin/deposits 200 in 1239ms
+ ○ Compiling /admin/withdrawals ...
+ ✓ Compiled /admin/withdrawals in 1229ms (942 modules)
+ GET /admin/withdrawals 200 in 1484ms
+ GET /admin/deposits 200 in 167ms
+ ○ Compiling /admin/funds ...
+ ✓ Compiled /admin/funds in 1241ms (902 modules)
+ GET /admin/funds 200 in 1704ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.9s (640 modules)
+ GET / 200 in 3622ms
+ ○ Compiling /auth/login ...
+ ✓ Compiled /auth/login in 1398ms (645 modules)
+ GET /auth/login 200 in 1908ms
+ ✓ Compiled /api/crm/login in 432ms (674 modules)
+ POST /api/crm/login 401 in 740ms
+ POST /api/crm/login 200 in 51ms
+ ○ Compiling /client ...
+ ✓ Compiled /client in 2.6s (1340 modules)
+ GET /client 200 in 3849ms
+ ✓ Compiled in 1442ms (664 modules)
+ ○ Compiling /api/crm/live-markets ...
+ ✓ Compiled /api/crm/live-markets in 591ms (678 modules)
+ GET /api/crm/live-markets 200 in 798ms
+ GET /api/crm/live-markets 200 in 800ms
+ GET /api/crm/live-markets 200 in 69ms
+ GET /api/crm/live-markets 200 in 54ms
+ GET /api/crm/live-markets 200 in 69ms
+ ○ Compiling /client/withdrawals ...
+ ✓ Compiled /client/withdrawals in 2.2s (678 modules)
+ ✓ Compiled /client/deposits in 2ms (678 modules)
+ ✓ Compiled in 2.2s (1344 modules)
+ GET /api/crm/live-markets 200 in 3329ms
+ GET /api/crm/live-markets 200 in 5624ms
+ GET /api/crm/live-markets 200 in 1081ms
+ GET /client/deposits 200 in 4587ms
+ GET /client 200 in 104ms
+ GET /api/crm/live-markets 200 in 105ms
+ GET /api/crm/live-markets 200 in 145ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 62ms
+ ○ Compiling /client/profile ...
+ ✓ Compiled /client/profile in 2.8s (1344 modules)
+ GET /api/crm/live-markets 200 in 2054ms
+ GET /client/profile 200 in 3333ms
+ GET /client 200 in 146ms
+ GET /api/crm/live-markets 200 in 110ms
+ GET /api/crm/live-markets 200 in 163ms
+ GET /api/crm/live-markets 200 in 136ms
+ GET /api/crm/live-markets 200 in 177ms
+ GET /api/crm/live-markets 200 in 203ms
+ GET /api/crm/live-markets 200 in 229ms
+ GET /api/crm/live-markets 200 in 142ms
+ GET /api/crm/live-markets 200 in 163ms
+ GET /api/crm/live-markets 200 in 151ms
+ GET /api/crm/live-markets 200 in 46ms
+ GET /api/crm/live-markets 200 in 39ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 36ms
+ GET /api/crm/live-markets 200 in 32ms
+ GET /api/crm/live-markets 200 in 52ms
+ GET /client/deposits 200 in 172ms
+ ○ Compiling /client/kyc ...
+ ✓ Compiled /client/kyc in 1546ms (951 modules)
+ GET /client/kyc 200 in 2069ms
+ ○ Compiling /admin/kyc ...
+ ✓ Compiled /admin/kyc in 530ms (282 modules)
+ GET /admin/kyc 200 in 781ms
+ ✓ Compiled /auth/login in 499ms (289 modules)
+ GET /auth/login 200 in 751ms
+ ✓ Compiled /api/crm/login in 324ms (292 modules)
+ POST /api/crm/login 200 in 444ms
+ ✓ Compiled /admin in 523ms (294 modules)
+ GET /admin 200 in 777ms
+ GET /api/crm/live-markets 200 in 102ms
+ GET /api/crm/live-markets 200 in 183ms
+ GET /api/crm/live-markets 200 in 63ms
+ GET /admin/kyc 200 in 192ms
+ GET /admin 200 in 78ms
+ GET /api/crm/live-markets 200 in 92ms
+ GET /api/crm/live-markets 200 in 136ms
+ GET /admin/kyc 200 in 204ms
+ GET /admin 200 in 93ms
+ GET /api/crm/live-markets 200 in 64ms
+ GET /api/crm/live-markets 200 in 95ms
+ GET /api/crm/live-markets 200 in 69ms
+ GET /admin/kyc 200 in 113ms
+ ○ Compiling /admin/clients ...
+ ✓ Compiled /admin/clients in 2.4s (921 modules)
+ GET /admin/clients 200 in 3012ms
+ ○ Compiling /admin/clients/[id] ...
+ ✓ Compiled /admin/clients/[id] in 1006ms (263 modules)
+ GET /admin/clients/1 200 in 1705ms
+ GET /admin/clients 200 in 675ms
+ GET /admin/clients/2 200 in 589ms
+ GET /admin/clients 200 in 211ms
+ GET /admin/clients/1 200 in 180ms
+ GET /admin/clients 200 in 85ms
+ ○ Compiling /admin/approvals ...
+ ✓ Compiled /admin/approvals in 836ms (256 modules)
+ GET /admin/approvals 200 in 1085ms
+ ✓ Compiled /api/crm/admin/approvals in 426ms (287 modules)
+ GET /api/crm/admin/approvals 200 in 658ms
+ GET /api/crm/admin/approvals 200 in 661ms
+ GET /admin/kyc 200 in 360ms
+ ○ Compiling /admin/deposits ...
+ ✓ Compiled /admin/deposits in 797ms (287 modules)
+ GET /admin/deposits 200 in 1127ms
+ ○ Compiling /admin/withdrawals ...
+ ✓ Compiled /admin/withdrawals in 534ms (289 modules)
+ GET /admin/withdrawals 200 in 766ms
+ ○ Compiling /admin/mt5 ...
+ ✓ Compiled /admin/mt5 in 1509ms (920 modules)
+ GET /admin/mt5 200 in 2147ms
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 9.7s
+ ○ Compiling /api/crm/state ...
+ ✓ Compiled /api/crm/state in 1563ms (57 modules)
+ GET /api/crm/state 200 in 1888ms
+ ○ Compiling /api/crm/login ...
+ ✓ Compiled /api/crm/login in 637ms (59 modules)
+ POST /api/crm/login 200 in 839ms
+ ○ Compiling /api/crm/kyc ...
+ ✓ Compiled /api/crm/kyc in 1522ms (61 modules)
+ POST /api/crm/kyc 200 in 2337ms
+ ○ Compiling /api/crm/admin/actions ...
+ ✓ Compiled /api/crm/admin/actions in 13.8s (63 modules)
+ PATCH /api/crm/admin/actions 200 in 14341ms
+ ○ Compiling /api/crm/deposits ...
+ ✓ Compiled /api/crm/deposits in 1393ms (65 modules)
+ POST /api/crm/deposits 200 in 1666ms
+ PATCH /api/crm/admin/actions 200 in 120ms
+ ○ Compiling /api/crm/withdrawals ...
+ ✓ Compiled /api/crm/withdrawals in 1116ms (67 modules)
+ POST /api/crm/withdrawals 200 in 1305ms
+ PATCH /api/crm/admin/actions 200 in 91ms
+ ○ Compiling / ...
+ ✓ Compiled / in 44.8s (1245 modules)
+ GET / 200 in 48354ms
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 8.6s
+ ○ Compiling /auth/login ...
+ ✓ Compiled /auth/login in 19.1s (476 modules)
+ GET /auth/login 200 in 20461ms
+ ○ Compiling /api/crm/state ...
+ ✓ Compiled /api/crm/state in 8.7s (262 modules)
+ GET /api/crm/state 200 in 9040ms
+ ✓ Compiled /api/crm/login in 372ms (264 modules)
+ POST /api/crm/login 200 in 556ms
+ POST /api/crm/login 200 in 50ms
+ GET /auth/login 200 in 216ms
+ ○ Compiling /admin/clients ...
+ ✓ Compiled /admin/clients in 2.5s (540 modules)
+ GET /admin/clients 200 in 2997ms
+ ○ Compiling /client/deposits ...
+ ✓ Compiled /client/deposits in 1641ms (528 modules)
+ GET /client/deposits 200 in 1947ms
+ POST /api/crm/login 200 in 71ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 1583ms (530 modules)
+ GET /admin 200 in 2118ms
+ GET /api/crm/state?userId=admin-1 200 in 145ms
+ GET /api/crm/state?userId=admin-1 200 in 231ms
+ ○ Compiling /api/crm/live-markets ...
+ ✓ Compiled /api/crm/live-markets in 1030ms (287 modules)
+ GET /api/crm/live-markets 200 in 1522ms
+ GET /api/crm/live-markets 200 in 1525ms
+ GET /api/crm/live-markets 200 in 56ms
+ GET /api/crm/live-markets 200 in 79ms
+ GET /api/crm/live-markets 200 in 58ms
+ GET /api/crm/live-markets 200 in 349ms
+ GET /api/crm/live-markets 200 in 52ms
+ GET /api/crm/live-markets 200 in 51ms
+ GET /api/crm/live-markets 200 in 45ms
+ GET /api/crm/live-markets 200 in 69ms
+ GET /api/crm/live-markets 200 in 198ms
+ GET /api/crm/live-markets 200 in 316ms
+ GET /api/crm/live-markets 200 in 63ms
+ GET /api/crm/live-markets 200 in 46ms
+ GET /api/crm/live-markets 200 in 46ms
+ GET /api/crm/live-markets 200 in 51ms
+ GET /api/crm/live-markets 200 in 40ms
+ GET /api/crm/live-markets 200 in 38ms
+ GET /api/crm/live-markets 200 in 52ms
+ GET /api/crm/live-markets 200 in 125ms
+ GET /api/crm/live-markets 200 in 111ms
+ GET /api/crm/live-markets 200 in 208ms
+ GET /api/crm/live-markets 200 in 275ms
+ GET /api/crm/live-markets 200 in 127ms
+ GET /api/crm/live-markets 200 in 182ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /api/crm/live-markets 200 in 44ms
+ GET /api/crm/live-markets 200 in 45ms
+ ○ Compiling / ...
+ ✓ Compiled / in 10.7s (1301 modules)
+ GET / 200 in 11741ms
+ GET /api/crm/live-markets 200 in 518ms
+ GET /api/crm/live-markets 200 in 1132ms
+ ○ Compiling /about/licences ...
+ ✓ Compiled /about/licences in 27.5s (1321 modules)
+ GET /api/crm/live-markets 200 in 12464ms
+ GET /about/licences 200 in 4283ms
+ ○ Compiling /trade ...
+ ✓ Compiled /trade in 4.7s (1351 modules)
+ GET /trade 200 in 6514ms
+ GET /api/crm/live-markets 200 in 155ms
+ GET / 200 in 688ms
+ ○ Compiling /auth/signup ...
+ ✓ Compiled /auth/signup in 3s (1353 modules)
+ GET /auth/signup 200 in 3586ms
+ GET /api/crm/live-markets 200 in 94ms
+ ○ Compiling /api/crm/signup ...
+ ✓ Compiled /api/crm/signup in 653ms (707 modules)
+ POST /api/crm/signup 200 in 887ms
+ GET /api/crm/live-markets 200 in 86ms
+ GET /api/crm/live-markets 200 in 36ms
+ ○ Compiling /admin/clients ...
+ ✓ Compiled /admin/clients in 661ms (709 modules)
+ GET /admin/clients 200 in 920ms
+ ✓ Compiled /api/crm/state in 513ms (711 modules)
+ GET /api/crm/state?userId=admin-1 200 in 638ms
+ GET /api/crm/state?userId=admin-1 200 in 659ms
+ ○ Compiling /admin/approvals ...
+ ✓ Compiled /admin/approvals in 1466ms (1360 modules)
+ GET /admin/approvals 200 in 1781ms
+ GET /api/crm/state?userId=admin-1 200 in 91ms
+ GET /api/crm/state?userId=admin-1 200 in 95ms
+ ○ Compiling /api/crm/admin/actions ...
+ ✓ Compiled /api/crm/admin/actions in 526ms (698 modules)
+ PATCH /api/crm/admin/actions 200 in 632ms
+ GET /api/crm/state?userId=admin-1 200 in 47ms
+ ○ Compiling /auth/login ...
+ ✓ Compiled /auth/login in 802ms (700 modules)
+ GET /auth/login 200 in 1386ms
+ ○ Compiling /api/crm/login ...
+ ✓ Compiled /api/crm/login in 557ms (683 modules)
+ POST /api/crm/login 401 in 667ms
+ POST /api/crm/login 200 in 79ms
+ ○ Compiling /client ...
+ ✓ Compiled /client in 1298ms (1332 modules)
+ GET /client 200 in 1621ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 86ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 82ms
+ GET /api/crm/live-markets 200 in 81ms
+ GET /api/crm/live-markets 200 in 96ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /api/crm/live-markets 200 in 41ms
+ GET /api/crm/live-markets 200 in 60ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 36ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 35ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 30ms
+ GET /api/crm/live-markets 200 in 45ms
+ GET /api/crm/live-markets 200 in 38ms
+ ○ Compiling /client/deposits ...
+ ✓ Compiled /client/deposits in 696ms (293 modules)
+ GET /client/deposits 200 in 1159ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 65ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 104ms
+ ○ Compiling /client/withdrawals ...
+ ✓ Compiled /client/withdrawals in 1312ms (938 modules)
+ GET /client/withdrawals 200 in 1557ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 115ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 103ms
+ ✓ Compiled /api/crm/profile in 396ms (289 modules)
+ PATCH /api/crm/profile 200 in 580ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 50ms
+ ○ Compiling /client/kyc ...
+ ✓ Compiled /client/kyc in 949ms (936 modules)
+ GET /client/kyc 200 in 1152ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 98ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 111ms
+ ✓ Compiled /api/crm/kyc in 436ms (291 modules)
+ POST /api/crm/kyc 200 in 570ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 44ms
+ ○ Compiling /admin/kyc ...
+ ✓ Compiled /admin/kyc in 862ms (933 modules)
+ GET /admin/kyc 200 in 1144ms
+ GET /api/crm/state?userId=admin-1 200 in 80ms
+ GET /api/crm/state?userId=admin-1 200 in 94ms
+ ✓ Compiled /api/crm/admin/actions in 273ms (286 modules)
+ PATCH /api/crm/admin/actions 200 in 461ms
+ GET /api/crm/state?userId=admin-1 200 in 117ms
+ GET /client/deposits 200 in 404ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 67ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 86ms
+ ✓ Compiled /api/crm/deposits in 359ms (286 modules)
+ POST /api/crm/deposits 200 in 470ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 54ms
+ ○ Compiling /admin/deposits ...
+ ✓ Compiled /admin/deposits in 8.1s (933 modules)
+ GET /admin/deposits 200 in 8359ms
+ GET /api/crm/state?userId=admin-1 200 in 87ms
+ GET /api/crm/state?userId=admin-1 200 in 90ms
+ PATCH /api/crm/admin/actions 200 in 44ms
+ GET /api/crm/state?userId=admin-1 200 in 53ms
+ ✓ Compiled /client in 435ms (286 modules)
+ GET /client 200 in 703ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 67ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 86ms
+ ✓ Compiled /api/crm/live-markets in 508ms (288 modules)
+ GET /api/crm/live-markets 200 in 631ms
+ GET /api/crm/live-markets 200 in 634ms
+ GET /api/crm/live-markets 200 in 36ms
+ ✓ Compiled /client/withdrawals in 516ms (290 modules)
+ GET /client/withdrawals 200 in 706ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 85ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 84ms
+ ○ Compiling /api/crm/withdrawals ...
+ ✓ Compiled /api/crm/withdrawals in 569ms (288 modules)
+ POST /api/crm/withdrawals 200 in 692ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 53ms
+ ○ Compiling /admin/withdrawals ...
+ ✓ Compiled /admin/withdrawals in 1017ms (935 modules)
+ GET /admin/withdrawals 200 in 1218ms
+ GET /api/crm/state?userId=admin-1 200 in 88ms
+ GET /api/crm/state?userId=admin-1 200 in 84ms
+ PATCH /api/crm/admin/actions 200 in 34ms
+ GET /api/crm/state?userId=admin-1 200 in 49ms
+ GET /client/withdrawals 200 in 138ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 75ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 77ms
+ ○ Compiling /client/mt5 ...
+ ✓ Compiled /client/mt5 in 1384ms (935 modules)
+ GET /client/mt5 200 in 1628ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 84ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 88ms
+ ○ Compiling /admin/mt5 ...
+ ✓ Compiled /admin/mt5 in 1028ms (937 modules)
+ GET /admin/mt5 200 in 1235ms
+ GET /api/crm/state?userId=admin-1 200 in 75ms
+ GET /api/crm/state?userId=admin-1 200 in 88ms
+ ✓ Compiled /admin/clients in 428ms (288 modules)
+ GET /admin/clients 200 in 619ms
+ GET /api/crm/state?userId=admin-1 200 in 102ms
+ GET /api/crm/state?userId=admin-1 200 in 147ms
+ ○ Compiling /admin/clients/[id] ...
+ ✓ Compiled /admin/clients/[id] in 1409ms (942 modules)
+ GET /admin/clients/client-1780476178961 200 in 3222ms
+ GET /api/crm/state 200 in 89ms
+ GET /api/crm/state 200 in 100ms
+ PATCH /api/crm/admin/actions 200 in 42ms
+ GET /api/crm/state 200 in 42ms
+ PATCH /api/crm/admin/actions 200 in 37ms
+ GET /api/crm/state 200 in 28ms
+ GET /client 200 in 77ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 75ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 111ms
+ ✓ Compiled /api/crm/live-markets in 397ms (290 modules)
+ GET /api/crm/live-markets 200 in 765ms
+ GET /api/crm/live-markets 200 in 768ms
+ GET /client/mt5 200 in 162ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 118ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 151ms
+ ○ Compiling /client/tickets ...
+ ✓ Compiled /client/tickets in 1397ms (942 modules)
+ GET /client/tickets 200 in 1626ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 66ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 106ms
+ ○ Compiling /client/profile ...
+ ✓ Compiled /client/profile in 1625ms (944 modules)
+ GET /client/profile 200 in 2029ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 89ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 94ms
+ GET /client 200 in 110ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 73ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 105ms
+ GET /api/crm/live-markets 200 in 88ms
+ GET /api/crm/live-markets 200 in 107ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 60ms
+ GET /api/crm/live-markets 200 in 60ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 42ms
+ PATCH /api/crm/admin/actions 200 in 51ms
+ GET /api/crm/state 200 in 53ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 39ms
+ ✓ Compiled /client/deposits in 475ms (292 modules)
+ GET /client/deposits 200 in 691ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 80ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 90ms
+ GET /client 200 in 113ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 84ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 69ms
+ GET /api/crm/live-markets 200 in 67ms
+ GET /api/crm/live-markets 200 in 105ms
+ GET /api/crm/live-markets 200 in 93ms
+ GET /api/crm/live-markets 200 in 45ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 42ms
+ GET /api/crm/live-markets 200 in 43ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 90ms
+ GET /api/crm/live-markets 200 in 160ms
+ GET /api/crm/live-markets 200 in 45ms
+ GET /api/crm/live-markets 200 in 40ms
+ GET /api/crm/live-markets 200 in 77ms
+ GET /api/crm/live-markets 200 in 49ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 54ms
+ GET /api/crm/live-markets 200 in 125ms
+ GET /admin/clients 200 in 375ms
+ GET /api/crm/live-markets 200 in 195ms
+ GET /api/crm/state?userId=admin-1 200 in 105ms
+ GET /api/crm/state?userId=admin-1 200 in 99ms
+ GET /api/crm/live-markets 200 in 110ms
+ GET /api/crm/live-markets 200 in 43ms
+ GET /client/profile 200 in 144ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 280ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 259ms
+ GET /client 200 in 116ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 76ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 120ms
+ GET /api/crm/live-markets 200 in 123ms
+ GET /api/crm/live-markets 200 in 122ms
+ ○ Compiling /admin/funds ...
+ ✓ Compiled /admin/funds in 1600ms (938 modules)
+ GET /api/crm/live-markets 200 in 1555ms
+ GET /admin/funds 200 in 1964ms
+ GET /api/crm/state?userId=admin-1 200 in 105ms
+ GET /api/crm/state?userId=admin-1 200 in 163ms
+ GET /api/crm/live-markets 200 in 114ms
+ GET /api/crm/live-markets 200 in 34ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /api/crm/live-markets 200 in 49ms
+ GET /api/crm/live-markets 200 in 56ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 83ms
+ GET /api/crm/live-markets 200 in 40ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 32ms
+ GET /admin/clients 200 in 103ms
+ GET /api/crm/state?userId=admin-1 200 in 69ms
+ GET /api/crm/state?userId=admin-1 200 in 88ms
+ GET /api/crm/live-markets 200 in 39ms
+ GET /api/crm/live-markets 200 in 82ms
+ GET /admin/clients/client-1780476178961 200 in 212ms
+ GET /api/crm/state 200 in 88ms
+ GET /api/crm/state 200 in 95ms
+ GET /api/crm/live-markets 200 in 46ms
+ GET /api/crm/live-markets 200 in 43ms
+ GET /api/crm/live-markets 200 in 40ms
+ GET /api/crm/live-markets 200 in 58ms
+ ✓ Compiled /api/crm/admin/actions in 254ms (288 modules)
+ PATCH /api/crm/admin/actions 200 in 349ms
+ GET /api/crm/state 200 in 59ms
+ GET /api/crm/live-markets 200 in 51ms
+ GET /api/crm/live-markets 200 in 81ms
+ ✓ Compiled /client/deposits in 411ms (290 modules)
+ GET /client/deposits 200 in 1000ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 70ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 97ms
+ GET /client 200 in 92ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 69ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 71ms
+ GET /api/crm/live-markets 200 in 76ms
+ GET /api/crm/live-markets 200 in 80ms
+ GET /api/crm/live-markets 200 in 81ms
+ GET /api/crm/live-markets 200 in 123ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 56ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 46ms
+ GET /api/crm/live-markets 200 in 51ms
+ GET /api/crm/live-markets 200 in 49ms
+ GET /api/crm/live-markets 200 in 45ms
+ GET /api/crm/live-markets 200 in 82ms
+ GET /api/crm/live-markets 200 in 42ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 34ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 40ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 34ms
+ GET /api/crm/live-markets 200 in 85ms
+ GET /api/crm/live-markets 200 in 84ms
+ GET /api/crm/live-markets 200 in 52ms
+ GET /api/crm/live-markets 200 in 42ms
+ GET /api/crm/live-markets 200 in 44ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 54ms
+ GET /api/crm/live-markets 200 in 57ms
+ GET /api/crm/live-markets 200 in 51ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 89ms
+ GET /api/crm/live-markets 200 in 47ms
+ PATCH /api/crm/admin/actions 200 in 38ms
+ GET /api/crm/state 200 in 45ms
+ GET /api/crm/live-markets 200 in 68ms
+ GET /api/crm/live-markets 200 in 91ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 35ms
+ GET /api/crm/live-markets 200 in 49ms
+ GET /api/crm/live-markets 200 in 43ms
+ GET /api/crm/live-markets 200 in 58ms
+ GET /api/crm/live-markets 200 in 54ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /api/crm/live-markets 200 in 57ms
+ GET /api/crm/live-markets 200 in 52ms
+ GET /api/crm/live-markets 200 in 45ms
+ GET /api/crm/live-markets 200 in 53ms
+ GET /api/crm/live-markets 200 in 49ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 103ms
+ GET /api/crm/live-markets 200 in 59ms
+ GET /api/crm/live-markets 200 in 74ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 30ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 58ms
+ GET /api/crm/live-markets 200 in 44ms
+ GET /api/crm/live-markets 200 in 70ms
+ GET /api/crm/live-markets 200 in 51ms
+ GET /api/crm/live-markets 200 in 58ms
+ GET /api/crm/live-markets 200 in 33ms
+ GET /api/crm/live-markets 200 in 54ms
+ GET /api/crm/live-markets 200 in 42ms
+ GET /api/crm/live-markets 200 in 42ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 65ms
+ GET /api/crm/live-markets 200 in 32ms
+ GET /api/crm/live-markets 200 in 90ms
+ GET /api/crm/live-markets 200 in 32ms
+ GET /api/crm/live-markets 200 in 34ms
+ GET /client/deposits 200 in 146ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 99ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 129ms
+ ○ Compiling /client/withdrawals ...
+ ✓ Compiled /client/withdrawals in 540ms (290 modules)
+ GET /client/withdrawals 200 in 858ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 85ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 75ms
+ ✓ Compiled in 646ms (253 modules)
+ ✓ Compiled in 2.1s (664 modules)
+ ✓ Compiled in 1276ms (664 modules)
+ ✓ Compiled in 2.1s (664 modules)
+ ✓ Compiled in 2.8s (664 modules)
+ ✓ Compiled in 2.1s (664 modules)
+ ✓ Compiled in 1993ms (664 modules)
+ GET /client 200 in 450ms
+ ○ Compiling /api/crm/state ...
+ ✓ Compiled /api/crm/state in 775ms (284 modules)
+ GET /api/crm/state?userId=client-1780476178961 200 in 1303ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 1323ms
+ ○ Compiling /api/crm/live-markets ...
+ ✓ Compiled /api/crm/live-markets in 666ms (286 modules)
+ GET /api/crm/live-markets 200 in 1597ms
+ GET /api/crm/live-markets 200 in 1596ms
+ GET /api/crm/live-markets 200 in 159ms
+ ○ Compiling /client/deposits ...
+ ✓ Compiled /client/deposits in 1251ms (288 modules)
+ GET /api/crm/live-markets 200 in 1116ms
+ GET /client/deposits 200 in 2260ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 87ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 89ms
+ ✓ Compiled in 1280ms (664 modules)
+ ✓ Compiled in 3.6s (952 modules)
+ ✓ Compiled in 2.7s (952 modules)
+ GET /admin/clients 200 in 222ms
+ GET /api/crm/state?userId=admin-1 200 in 114ms
+ GET /api/crm/state?userId=admin-1 200 in 113ms
+ ○ Compiling /admin/settings ...
+ ✓ Compiled /admin/settings in 2.1s (950 modules)
+ GET /admin/settings 200 in 2925ms
+ GET /api/crm/state?userId=admin-1 200 in 124ms
+ GET /api/crm/state?userId=admin-1 200 in 123ms
+ ✓ Compiled in 2.1s (948 modules)
+ GET /api/crm/state?userId=admin-1 200 in 126ms
+ GET /api/crm/state?userId=admin-1 200 in 125ms
+ ✓ Compiled in 3.5s (948 modules)
+ ○ Compiling /admin/deposits ...
+ ✓ Compiled /admin/deposits in 669ms (286 modules)
+ GET /admin/deposits 200 in 2018ms
+ GET /api/crm/state?userId=admin-1 200 in 90ms
+ GET /api/crm/state?userId=admin-1 200 in 146ms
+ ✓ Compiled in 2.8s (948 modules)
+ ✓ Compiled in 3.2s (948 modules)
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 17.4s (919 modules)
+ GET /admin 200 in 19121ms
+ ○ Compiling /api/crm/state ...
+ ✓ Compiled /api/crm/state in 1370ms (286 modules)
+ GET /api/crm/state?userId=admin-1 200 in 2087ms
+ GET /api/crm/state?userId=admin-1 200 in 2290ms
+ ○ Compiling /api/crm/live-markets ...
+ ✓ Compiled /api/crm/live-markets in 5.5s (952 modules)
+ GET /api/crm/live-markets 200 in 5812ms
+ GET /api/crm/live-markets 200 in 72ms
+ GET /api/crm/live-markets 200 in 64ms
+ GET /api/crm/live-markets 200 in 125ms
+ GET /api/crm/live-markets 200 in 57ms
+ GET /api/crm/live-markets 200 in 316ms
+ GET /api/crm/live-markets 200 in 34ms
+ GET /api/crm/live-markets 200 in 71ms
+ GET /api/crm/live-markets 200 in 76ms
+ GET /api/crm/live-markets 200 in 95ms
+ GET /api/crm/live-markets 200 in 67ms
+ GET /api/crm/live-markets 200 in 56ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 3.5s (949 modules)
+ GET /api/crm/live-markets 404 in 4502ms
+ GET /api/crm/live-markets 404 in 165ms
+ GET /_next/static/css/app/layout.css?v=1780477965974 404 in 67ms
+ GET /_next/static/css/app/layout.css?v=1780477966306 404 in 128ms
+ GET /api/crm/live-markets 404 in 186ms
+ GET /api/crm/live-markets 404 in 134ms
+ GET /api/crm/live-markets 404 in 116ms
+ GET /api/crm/live-markets 404 in 112ms
+ GET /api/crm/live-markets 404 in 135ms
+ GET /api/crm/live-markets 404 in 172ms
+ GET /api/crm/live-markets 404 in 94ms
+ GET /api/crm/live-markets 404 in 99ms
+ GET /api/crm/live-markets 404 in 126ms
+ GET /api/crm/live-markets 404 in 129ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 10s (1173 modules)
+ ✓ Compiled in 550ms (838 modules)
+ GET /api/crm/live-markets 500 in 12209ms
+ GET /api/crm/live-markets 500 in 8736ms
+ GET /api/crm/live-markets 500 in 5623ms
+ GET /api/crm/live-markets 500 in 3107ms
+ GET /api/crm/live-markets 500 in 185ms
+ GET /admin 500 in 195ms
+ GET /client/deposits 500 in 280ms
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 7.1s
+ ○ Compiling /client/deposits ...
+ ✓ Compiled /api/crm/login in 76.2s (532 modules)
+ GET /admin 200 in 78814ms
+ GET /client/deposits 200 in 78798ms
+ POST /api/crm/login 200 in 31131ms
+ GET /_next/static/webpack/dcb46b4c39078961.webpack.hot-update.json 404 in 79482ms
+ GET /_next/static/webpack/dcb46b4c39078961.webpack.hot-update.json 404 in 79104ms
+ GET /admin 200 in 1036ms
+ GET /client/deposits 200 in 696ms
+ ○ Compiling /api/crm/deposits ...
+ ✓ Compiled /api/crm/deposits in 1380ms (277 modules)
+ POST /api/crm/deposits 403 in 1867ms
+ ○ Compiling /api/crm/kyc ...
+ ✓ Compiled /api/crm/kyc in 1219ms (279 modules)
+ POST /api/crm/kyc 200 in 1538ms
+ ○ Compiling /api/crm/admin/actions ...
+ ✓ Compiled /api/crm/admin/actions in 1250ms (281 modules)
+ PATCH /api/crm/admin/actions 200 in 1621ms
+ POST /api/crm/deposits 200 in 97ms
+ PATCH /api/crm/admin/actions 200 in 80ms
+ PATCH /api/crm/admin/actions 200 in 62ms
+ PATCH /api/crm/admin/actions 200 in 61ms
+ ○ Compiling /api/crm/state ...
+ ✓ Compiled /api/crm/state in 1472ms (283 modules)
+ GET /api/crm/state?userId=client-1780476178961 200 in 1775ms
+ GET /api/crm/state?userId=admin-1 200 in 1520ms
+ GET /api/crm/state?userId=admin-1 200 in 1252ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 1920ms
+ ○ Compiling /api/crm/live-markets ...
+ ✓ Compiled /api/crm/live-markets in 1341ms (285 modules)
+ GET /api/crm/live-markets 200 in 2055ms
+ GET /api/crm/live-markets 200 in 2058ms
+ GET /api/crm/live-markets 200 in 59ms
+ GET /api/crm/live-markets 200 in 49ms
+ GET /api/crm/live-markets 200 in 69ms
+ GET /api/crm/live-markets 200 in 104ms
+ GET /api/crm/live-markets 200 in 60ms
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 11.6s
+ ○ Compiling /api/crm/live-markets ...
+ ✓ Compiled /api/crm/live-markets in 3.4s (56 modules)
+ GET /api/crm/live-markets 200 in 4383ms
+ GET /api/crm/live-markets 200 in 4383ms
+ GET /api/crm/live-markets 200 in 4383ms
+ GET /api/crm/live-markets 200 in 3086ms
+ GET /api/crm/live-markets 200 in 4410ms
+ GET /api/crm/live-markets 200 in 934ms
+ GET /api/crm/live-markets 200 in 471ms
+ ✓ Compiled /api/crm/state in 320ms (59 modules)
+ GET /api/crm/state 200 in 470ms
+ ○ Compiling /auth/signup ...
+ ✓ Compiled /client in 39.1s (540 modules)
+ GET /api/crm/live-markets 200 in 32974ms
+ GET /auth/signup 200 in 40388ms
+ GET /client 200 in 33686ms
+ ○ Compiling /auth/login ...
+ ✓ Compiled /auth/login in 6.9s (528 modules)
+ GET /api/crm/state?userId=client-1780476178961 200 in 6284ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 6300ms
+ GET /auth/login 200 in 8268ms
+ GET /api/crm/live-markets 200 in 512ms
+ GET /api/crm/live-markets 200 in 502ms
+ GET /client 200 in 321ms
+ ○ Compiling /admin/deposits ...
+ ✓ Compiled /admin/deposits in 2.1s (530 modules)
+ GET /api/crm/live-markets 200 in 1690ms
+ GET /admin/deposits 200 in 2656ms
+ GET /api/crm/live-markets 200 in 265ms
+ GET /api/crm/live-markets 200 in 408ms
+ GET /api/crm/live-markets 200 in 98ms
+ GET /api/crm/live-markets 200 in 53ms
+ GET /api/crm/live-markets 200 in 74ms
+ GET /api/crm/live-markets 200 in 60ms
+ GET /api/crm/live-markets 200 in 159ms
+ GET /api/crm/live-markets 200 in 64ms
+ GET /api/crm/live-markets 200 in 358ms
+ GET /api/crm/live-markets 200 in 969ms
+ GET /api/crm/live-markets 200 in 199ms
+ GET /api/crm/live-markets 200 in 66ms
+ GET /api/crm/live-markets 200 in 100ms
+ GET /api/crm/live-markets 200 in 134ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 2.4s (532 modules)
+ GET /api/crm/live-markets 200 in 513ms
+ GET /api/crm/live-markets 200 in 1804ms
+ GET /admin 200 in 2825ms
+ GET /api/crm/live-markets 200 in 53ms
+ GET /api/crm/state?userId=admin-1 200 in 76ms
+ GET /api/crm/state?userId=admin-1 200 in 96ms
+ GET /api/crm/live-markets 200 in 94ms
+ GET /api/crm/live-markets 200 in 122ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /api/crm/live-markets 200 in 44ms
+ ○ Compiling /admin/clients ...
+ ✓ Compiled /admin/clients in 845ms (534 modules)
+ GET /admin/clients 200 in 1114ms
+ GET /api/crm/live-markets 200 in 72ms
+ GET /api/crm/state?userId=admin-1 200 in 97ms
+ GET /api/crm/state?userId=admin-1 200 in 96ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 39ms
+ GET /client 200 in 159ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 222ms
+ GET /api/crm/state?userId=client-1780476178961 200 in 219ms
+ GET /api/crm/live-markets 200 in 194ms
+ GET /api/crm/live-markets 200 in 192ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /auth/login 200 in 147ms
+ ✓ Compiled /api/crm/login in 367ms (287 modules)
+ POST /api/crm/login 200 in 491ms
+ GET /client 200 in 174ms
+ GET /api/crm/state?userId=client-1 200 in 119ms
+ GET /api/crm/state?userId=client-1 200 in 179ms
+ GET /api/crm/live-markets 200 in 85ms
+ GET /api/crm/live-markets 200 in 124ms
+ GET /api/crm/live-markets 200 in 90ms
+ GET /api/crm/live-markets 200 in 39ms
+ ○ Compiling /admin/clients/[id] ...
+ ✓ Compiled /admin/clients/[id] in 1391ms (541 modules)
+ GET /api/crm/live-markets 200 in 89ms
+ GET /admin/clients/client-1 200 in 3416ms
+ GET /api/crm/state 200 in 65ms
+ GET /api/crm/state 200 in 99ms
+ GET /api/crm/live-markets 200 in 33ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /api/crm/live-markets 200 in 46ms
+ GET /api/crm/live-markets 200 in 49ms
+ ✓ Compiled /api/crm/admin/actions in 394ms (295 modules)
+ PATCH /api/crm/admin/actions 200 in 517ms
+ GET /api/crm/state 200 in 52ms
+ GET /api/crm/live-markets 200 in 42ms
+ GET /api/crm/state?userId=client-1 200 in 38ms
+ GET /api/crm/live-markets 200 in 61ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 52ms
+ GET /api/crm/live-markets 200 in 45ms
+ PATCH /api/crm/admin/actions 200 in 40ms
+ GET /api/crm/state 200 in 40ms
+ GET /api/crm/live-markets 200 in 41ms
+ GET /api/crm/state?userId=client-1 200 in 31ms
+ GET /api/crm/live-markets 200 in 60ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /api/crm/live-markets 200 in 39ms
+ GET /api/crm/live-markets 200 in 37ms
+ PATCH /api/crm/admin/actions 200 in 40ms
+ GET /api/crm/state 200 in 41ms
+ GET /api/crm/live-markets 200 in 64ms
+ GET /api/crm/state?userId=client-1 200 in 33ms
+ GET /api/crm/live-markets 200 in 39ms
+ GET /api/crm/live-markets 200 in 40ms
+ GET /api/crm/live-markets 200 in 52ms
+ GET /api/crm/live-markets 200 in 53ms
+ GET /api/crm/live-markets 200 in 89ms
+ GET /api/crm/live-markets 200 in 89ms
+ GET /api/crm/live-markets 200 in 52ms
+ ○ Compiling /client/kyc ...
+ ✓ Compiled /client/kyc in 1103ms (543 modules)
+ GET /api/crm/live-markets 200 in 354ms
+ GET /client/kyc 200 in 1430ms
+ GET /api/crm/state?userId=client-1 200 in 69ms
+ GET /api/crm/state?userId=client-1 200 in 88ms
+ GET /admin/clients 200 in 153ms
+ GET /api/crm/state?userId=admin-1 200 in 90ms
+ GET /api/crm/state?userId=admin-1 200 in 70ms
+ ○ Compiling / ...
+ ✓ Compiled / in 10.7s (1321 modules)
+ GET / 200 in 11371ms
+ GET /auth/login 200 in 273ms
+ ✓ Compiled in 5.1s (1296 modules)
+ ○ Compiling /auth/forgot-password ...
+ ✓ Compiled /auth/forgot-password in 1563ms (1284 modules)
+ GET /auth/forgot-password 200 in 1995ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1259ms (1287 modules)
+ GET /_next/static/css/app/layout.css?v=1780479231698 404 in 1656ms
+ GET /_next/static/chunks/main-app.js?v=1780479231698 404 in 1673ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 1633ms
+ GET /auth/login 200 in 729ms
+ GET /_next/static/css/app/layout.css?v=1780479239744 404 in 231ms
+ GET /_next/static/chunks/main-app.js?v=1780479239744 404 in 263ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 264ms
+ GET /_next/static/chunks/app/auth/login/page.js 404 in 264ms
+ GET / 200 in 563ms
+ GET /_next/static/css/app/layout.css?v=1780479243790 404 in 207ms
+ GET /_next/static/chunks/main-app.js?v=1780479243790 404 in 557ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 533ms
+ GET /_next/static/chunks/app/page.js 404 in 530ms
+ GET /client/kyc 200 in 345ms
+ GET /_next/static/css/app/layout.css?v=1780479245032 404 in 267ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 255ms
+ GET /_next/static/chunks/main-app.js?v=1780479245032 404 in 266ms
+ GET /_next/static/chunks/app/client/kyc/page.js 404 in 207ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 908ms (651 modules)
+ GET /admin 200 in 1495ms
+ GET /_next/static/css/app/layout.css?v=1780479252878 404 in 153ms
+ GET /_next/static/chunks/main-app.js?v=1780479252878 404 in 165ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 165ms
+ GET /_next/static/chunks/app/admin/page.js 404 in 164ms
+ GET / 200 in 419ms
+ GET /_next/static/css/app/layout.css?v=1780479264099 404 in 198ms
+ GET /_next/static/chunks/main-app.js?v=1780479264099 404 in 122ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 175ms
+ GET /_next/static/chunks/app/page.js 404 in 134ms
+ GET / 200 in 922ms
+ GET /_next/static/css/app/layout.css?v=1780479320314 404 in 522ms
+ GET /_next/static/chunks/main-app.js?v=1780479320314 404 in 1155ms
+ GET /_next/static/chunks/app/page.js 404 in 1102ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 1123ms
+ GET / 200 in 211ms
+ GET /_next/static/css/app/layout.css?v=1780479445917 404 in 108ms
+ GET /_next/static/chunks/main-app.js?v=1780479445917 404 in 176ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 116ms
+ GET /_next/static/chunks/app/page.js 404 in 75ms
+ GET / 200 in 228ms
+ GET /_next/static/css/app/layout.css?v=1780479512308 404 in 254ms
+ GET /_next/static/chunks/main-app.js?v=1780479512308 404 in 225ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 300ms
+ GET /_next/static/chunks/app/page.js 404 in 306ms
+ ○ Compiling /auth/signup ...
+ ✓ Compiled /auth/signup in 1404ms (649 modules)
+ GET /auth/signup 200 in 1765ms
+ GET /_next/static/css/app/layout.css?v=1780479521473 404 in 118ms
+ GET /_next/static/chunks/main-app.js?v=1780479521473 404 in 208ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 159ms
+ GET /_next/static/chunks/app/auth/signup/page.js 404 in 83ms
+ GET / 200 in 420ms
+ GET /_next/static/css/app/layout.css?v=1780479537851 404 in 63ms
+ GET /_next/static/chunks/main-app.js?v=1780479537851 404 in 138ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 317ms
+ GET /_next/static/chunks/app/page.js 404 in 59ms
+ GET / 200 in 223ms
+ GET /_next/static/css/app/layout.css?v=1780479896301 404 in 251ms
+ GET /_next/static/chunks/main-app.js?v=1780479896301 404 in 235ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 192ms
+ GET /_next/static/chunks/app/page.js 404 in 106ms
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 13s
+ ○ Compiling / ...
+ ✓ Compiled / in 29.8s (1245 modules)
+ GET / 200 in 32049ms
+ GET / 200 in 25500ms
+ GET / 200 in 353ms
+ GET / 200 in 239ms
+ ○ Compiling /auth/login ...
+ ✓ Compiled /auth/login in 18s (1258 modules)
+ GET /auth/login 200 in 20474ms
+ GET / 200 in 9214ms
+ GET / 200 in 967ms
+ ○ Compiling /auth/forgot-password ...
+ ✓ Compiled /auth/forgot-password in 4.1s (1260 modules)
+ GET /auth/forgot-password 200 in 4874ms
+ GET / 200 in 734ms
+ GET /auth/login 200 in 253ms
+ ○ Compiling /api/crm/login ...
+ ✓ Compiled /api/crm/login in 1596ms (656 modules)
+ POST /api/crm/login 200 in 2064ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 2.9s (1318 modules)
+ GET /admin 200 in 3533ms
+ ✓ Compiled /api/crm/state in 515ms (673 modules)
+ GET /api/crm/state?userId=admin-1 200 in 707ms
+ GET /api/crm/state?userId=admin-1 200 in 721ms
+ ○ Compiling /api/crm/live-markets ...
+ ✓ Compiled /api/crm/live-markets in 537ms (675 modules)
+ GET /api/crm/live-markets 200 in 702ms
+ GET /api/crm/live-markets 200 in 704ms
+ GET /api/crm/live-markets 200 in 35ms
+ ○ Compiling /admin/tickets ...
+ ✓ Compiled /admin/tickets in 1746ms (1324 modules)
+ GET /admin/tickets 200 in 2468ms
+ GET /api/crm/state?userId=admin-1 200 in 92ms
+ GET /api/crm/state?userId=admin-1 200 in 111ms
+ ○ Compiling /admin/emails ...
+ ✓ Compiled /admin/emails in 2.1s (1326 modules)
+ GET /admin/emails 200 in 2808ms
+ GET /api/crm/state?userId=admin-1 200 in 110ms
+ GET /api/crm/state?userId=admin-1 200 in 170ms
+ ○ Compiling /admin/clients ...
+ ✓ Compiled /admin/clients in 1981ms (1328 modules)
+ GET /admin/clients 200 in 2477ms
+ GET /api/crm/state?userId=admin-1 200 in 76ms
+ GET /api/crm/state?userId=admin-1 200 in 50ms
+ GET /auth/forgot-password 200 in 120ms
+ ○ Compiling /admin/clients/[id] ...
+ ✓ Compiled /admin/clients/[id] in 2.9s (1329 modules)
+ GET /admin/clients/client-1 200 in 11081ms
+ GET /api/crm/state 200 in 82ms
+ GET /api/crm/state 200 in 99ms
+ ○ Compiling /admin/withdrawals ...
+ ✓ Compiled /admin/withdrawals in 1856ms (1329 modules)
+ GET /admin/withdrawals 200 in 2409ms
+ GET /api/crm/state?userId=admin-1 200 in 81ms
+ GET /api/crm/state?userId=admin-1 200 in 112ms
+ ✓ Compiled /admin in 510ms (679 modules)
+ GET /admin 200 in 944ms
+ GET /api/crm/state?userId=admin-1 200 in 98ms
+ GET /api/crm/state?userId=admin-1 200 in 127ms
+ ○ Compiling /api/crm/live-markets ...
+ ✓ Compiled /api/crm/live-markets in 692ms (681 modules)
+ GET /api/crm/live-markets 200 in 885ms
+ GET /api/crm/live-markets 200 in 890ms
+ GET /admin/withdrawals 200 in 178ms
+ GET /api/crm/state?userId=admin-1 200 in 75ms
+ GET /api/crm/state?userId=admin-1 200 in 88ms
+ ○ Compiling /admin/deposits ...
+ ✓ Compiled /admin/deposits in 1648ms (1333 modules)
+ GET /admin/deposits 200 in 2078ms
+ GET /api/crm/state?userId=admin-1 200 in 78ms
+ GET /api/crm/state?userId=admin-1 200 in 100ms
+ GET /admin 200 in 183ms
+ GET /api/crm/state?userId=admin-1 200 in 198ms
+ GET /api/crm/state?userId=admin-1 200 in 185ms
+ GET /api/crm/live-markets 200 in 273ms
+ GET /api/crm/live-markets 200 in 253ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 51ms
+ GET /api/crm/live-markets 200 in 69ms
+ GET /api/crm/live-markets 200 in 79ms
+ GET /api/crm/live-markets 200 in 160ms
+ GET /api/crm/live-markets 200 in 56ms
+ GET /api/crm/live-markets 200 in 908ms
+ GET /api/crm/live-markets 200 in 156ms
+ GET /api/crm/live-markets 200 in 78ms
+ GET /api/crm/live-markets 200 in 95ms
+ GET /api/crm/live-markets 200 in 81ms
+ GET /api/crm/live-markets 200 in 70ms
+ GET /api/crm/live-markets 200 in 193ms
+ GET /api/crm/live-markets 200 in 1102ms
+ GET /api/crm/live-markets 200 in 1095ms
+ GET /api/crm/live-markets 200 in 601ms
+ GET /api/crm/live-markets 200 in 629ms
+ GET /api/crm/live-markets 200 in 476ms
+ GET /api/crm/live-markets 200 in 485ms
+ GET /api/crm/live-markets 200 in 558ms
+ GET /api/crm/live-markets 200 in 279ms
+ GET /api/crm/live-markets 200 in 226ms
+ GET /api/crm/live-markets 200 in 182ms
+ GET /api/crm/live-markets 200 in 130ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /api/crm/live-markets 200 in 37ms
+ GET /api/crm/live-markets 200 in 44ms
+ GET /api/crm/live-markets 200 in 86ms
+ GET /api/crm/live-markets 200 in 151ms
+ GET /api/crm/live-markets 200 in 945ms
+ GET /api/crm/live-markets 200 in 400ms
+ GET /api/crm/live-markets 200 in 58ms
+ GET /api/crm/live-markets 200 in 44ms
+ GET /api/crm/live-markets 200 in 84ms
+ GET /api/crm/live-markets 200 in 33ms
+ GET /api/crm/live-markets 200 in 53ms
+ GET /api/crm/live-markets 200 in 34ms
+ GET /api/crm/live-markets 200 in 46ms
+ GET /api/crm/live-markets 200 in 40ms
+ GET /api/crm/live-markets 200 in 49ms
+ GET /api/crm/live-markets 200 in 60ms
+ GET /api/crm/live-markets 200 in 45ms
+ GET /api/crm/live-markets 200 in 58ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 62ms
+ GET /api/crm/live-markets 200 in 69ms
+ GET /api/crm/live-markets 200 in 3778ms
+ GET /api/crm/live-markets 200 in 1200ms
+ GET /api/crm/live-markets 200 in 114ms
+ GET /api/crm/live-markets 200 in 212ms
+ GET /api/crm/live-markets 200 in 113ms
+ GET /api/crm/live-markets 200 in 187ms
+ GET /api/crm/live-markets 200 in 115ms
+ GET /api/crm/live-markets 200 in 182ms
+ GET /api/crm/live-markets 200 in 158ms
+ GET /api/crm/live-markets 200 in 235ms
+ GET /api/crm/live-markets 200 in 103ms
+ GET /api/crm/live-markets 200 in 102ms
+ GET /api/crm/live-markets 200 in 166ms
+ GET /api/crm/live-markets 200 in 138ms
+ GET /api/crm/live-markets 200 in 74ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.4s (1311 modules)
+ ✓ Compiled in 3ms (673 modules)
+ ✓ Compiled in 4s (1325 modules)
+ GET / 200 in 8073ms
+ GET /api/crm/live-markets 404 in 9580ms
+ GET /api/crm/live-markets 404 in 7414ms
+ GET /_next/static/css/app/layout.css?v=1780482010919 404 in 498ms
+ GET /api/crm/live-markets 404 in 7123ms
+ GET /api/crm/live-markets 404 in 3100ms
+ GET /_next/static/chunks/main-app.js?v=1780482010919 404 in 519ms
+ GET /api/crm/live-markets 404 in 2032ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 238ms
+ GET /_next/static/chunks/app/page.js 404 in 245ms
+ GET /_next/static/css/app/layout.css?v=1780482012992 404 in 132ms
+ GET /api/crm/live-markets 404 in 209ms
+ GET /_next/static/css/app/layout.css?v=1780482014150 404 in 62ms
+ GET /_next/static/css/app/layout.css?v=1780482012699 404 in 64ms
+ GET /api/crm/live-markets 404 in 85ms
+ GET /api/crm/live-markets 404 in 108ms
+ GET /api/crm/live-markets 404 in 115ms
+ GET /api/crm/live-markets 404 in 139ms
+ GET /api/crm/live-markets 404 in 212ms
+ GET /auth/forgot-password 200 in 180ms
+ GET /_next/static/css/app/layout.css?v=1780482033312 404 in 101ms
+ GET /_next/static/chunks/main-app.js?v=1780482033312 404 in 80ms
+ GET /api/crm/live-markets 404 in 239ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 139ms
+ GET /_next/static/chunks/app/auth/forgot-password/page.js 404 in 137ms
+ GET /api/crm/live-markets 404 in 104ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 12.9s (1552 modules)
+ ✓ Compiled in 452ms (824 modules)
+ GET /api/crm/live-markets 500 in 15902ms
+ GET /api/crm/live-markets 500 in 14327ms
+ GET /api/crm/live-markets 500 in 8139ms
+ GET /api/crm/live-markets 500 in 5631ms
+ GET /api/crm/live-markets 500 in 3470ms
+ GET /api/crm/live-markets 500 in 263ms
+ GET /admin 500 in 117ms
+ GET / 500 in 82ms
+ GET / 500 in 713ms
+ GET / 500 in 788ms
+ GET / 500 in 126ms
+ GET /_next/static/chunks/react-refresh.js 500 in 41354ms
+ GET /_next/static/chunks/webpack.js 500 in 41410ms
+ GET /_next/static/chunks/main.js 500 in 42063ms
+ GET /_next/static/development/_ssgManifest.js 500 in 2678ms
+ GET /_next/static/development/_buildManifest.js 500 in 45614ms
+ GET /_next/static/chunks/pages/_error.js 500 in 45605ms
+ GET /_next/static/chunks/pages/_app.js 500 in 45788ms
+ GET / 500 in 319ms
+ GET /_next/static/chunks/webpack.js 500 in 99ms
+ GET /_next/static/chunks/main.js 500 in 93ms
+ GET /_next/static/chunks/react-refresh.js 500 in 117ms
+ GET /_next/static/chunks/pages/_app.js 500 in 95ms
+ GET /_next/static/development/_buildManifest.js 500 in 83ms
+ GET /_next/static/chunks/pages/_error.js 500 in 78ms
+ GET /_next/static/development/_ssgManifest.js 500 in 45ms
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 11.1s
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 48.5s (1288 modules)
+ GET /admin 200 in 49184ms
+ GET / 200 in 47563ms
+ GET / 200 in 25045ms
+ GET /_next/static/webpack/8cd0eb7a8d0160a5.webpack.hot-update.json 404 in 50838ms
+ GET /_next/static/webpack/8cd0eb7a8d0160a5.webpack.hot-update.json 404 in 48423ms
+ GET /auth/forgot-password 200 in 51100ms
+ GET / 200 in 51127ms
+ GET /admin 200 in 2299ms
+ GET / 200 in 1223ms
+ ○ Compiling /api/crm/state ...
+ ✓ Compiled /api/crm/state in 40s (670 modules)
+ GET /api/crm/state?userId=admin-1 200 in 42812ms
+ GET /api/crm/state?userId=admin-1 200 in 42851ms
+ ○ Compiling /api/crm/live-markets ...
+ ✓ Compiled /api/crm/live-markets in 56.8s (671 modules)
+ GET /api/crm/live-markets 200 in 58706ms
+ GET /api/crm/live-markets 200 in 28258ms
+ GET /api/crm/live-markets 200 in 24632ms
+ GET /api/crm/live-markets 200 in 7542ms
+ GET /api/crm/live-markets 200 in 4166ms
+ GET /api/crm/live-markets 200 in 58730ms
+ GET /api/crm/live-markets 200 in 117ms
+ GET /api/crm/live-markets 200 in 282ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 245ms
+ GET /api/crm/live-markets 200 in 180ms
+ GET /api/crm/live-markets 200 in 128ms
+ GET /api/crm/live-markets 200 in 152ms
+ GET /api/crm/live-markets 200 in 12479ms
+ GET /api/crm/live-markets 200 in 12338ms
+ GET /api/crm/live-markets 200 in 5718ms
+ GET /api/crm/live-markets 200 in 5719ms
+ GET /api/crm/live-markets 200 in 5733ms
+ GET /api/crm/live-markets 200 in 5734ms
+ GET /api/crm/live-markets 200 in 606ms
+ GET /api/crm/live-markets 200 in 605ms
+ GET /api/crm/live-markets 200 in 601ms
+ GET /api/crm/live-markets 200 in 599ms
+ GET /api/crm/live-markets 200 in 602ms
+ GET /api/crm/live-markets 200 in 578ms
+ GET /api/crm/live-markets 200 in 589ms
+ GET /api/crm/live-markets 200 in 584ms
+ GET /api/crm/live-markets 200 in 583ms
+ GET /api/crm/live-markets 200 in 155ms
+ GET /api/crm/live-markets 200 in 470ms
+ GET /api/crm/live-markets 200 in 74ms
+ GET /api/crm/live-markets 200 in 52ms
+ GET /api/crm/live-markets 200 in 60ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 40ms
+ GET /api/crm/live-markets 200 in 2629ms
+ GET /api/crm/live-markets 200 in 118ms
+ GET /api/crm/live-markets 200 in 101ms
+ GET /api/crm/live-markets 200 in 86ms
+ GET /api/crm/live-markets 200 in 222ms
+ GET /api/crm/live-markets 200 in 51ms
+ GET /api/crm/live-markets 200 in 40ms
+ GET /api/crm/live-markets 200 in 37ms
+ GET /api/crm/live-markets 200 in 641ms
+ GET /api/crm/live-markets 200 in 92ms
+ GET /api/crm/live-markets 200 in 73ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 49ms
+ GET /api/crm/live-markets 200 in 53ms
+ GET /api/crm/live-markets 200 in 51ms
+ GET /api/crm/live-markets 200 in 54ms
+ GET /api/crm/live-markets 200 in 62ms
+ GET /api/crm/live-markets 200 in 96ms
+ GET /api/crm/live-markets 200 in 69ms
+ GET / 200 in 7334ms
+ GET /api/crm/live-markets 200 in 559ms
+ GET /api/crm/live-markets 200 in 109ms
+ GET /api/crm/live-markets 200 in 71ms
+ GET /api/crm/live-markets 200 in 52ms
+ GET / 200 in 553ms
+ ○ Compiling /auth/login ...
+ ✓ Compiled /auth/login in 10.2s (1317 modules)
+ GET /api/crm/live-markets 200 in 5243ms
+ GET /api/crm/live-markets 200 in 982ms
+ GET /api/crm/live-markets 200 in 5782ms
+ GET /auth/login 200 in 11927ms
+ GET /api/crm/live-markets 200 in 59ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /auth/forgot-password 200 in 108ms
+ GET /api/crm/live-markets 200 in 45ms
+ GET /api/crm/live-markets 200 in 134ms
+ GET /admin 200 in 91ms
+ ✓ Compiled /api/crm/state in 440ms (673 modules)
+ GET /api/crm/state?userId=admin-1 200 in 583ms
+ GET /api/crm/state?userId=admin-1 200 in 585ms
+ GET /api/crm/live-markets 200 in 89ms
+ GET /api/crm/live-markets 200 in 117ms
+ GET /api/crm/live-markets 200 in 53ms
+ GET /api/crm/live-markets 200 in 62ms
+ GET /api/crm/live-markets 200 in 38ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 49ms
+ GET /api/crm/live-markets 200 in 56ms
+ GET /api/crm/live-markets 200 in 69ms
+ GET /api/crm/live-markets 200 in 44ms
+ GET / 200 in 386ms
+ GET /api/crm/live-markets 200 in 160ms
+ GET /api/crm/live-markets 200 in 2642ms
+ GET /api/crm/live-markets 200 in 227ms
+ GET /api/crm/live-markets 200 in 102ms
+ GET /api/crm/live-markets 200 in 47ms
+ GET /api/crm/live-markets 200 in 127ms
+ GET /api/crm/live-markets 200 in 128ms
+ GET /api/crm/live-markets 200 in 116ms
+ GET /api/crm/live-markets 200 in 41ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 112ms
+ GET /api/crm/live-markets 200 in 154ms
+ GET /api/crm/live-markets 200 in 56ms
+ GET /api/crm/live-markets 200 in 43ms
+ GET /api/crm/live-markets 200 in 38ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 46ms
+ GET /api/crm/live-markets 200 in 76ms
+ GET /api/crm/live-markets 200 in 696ms
+ GET /api/crm/live-markets 200 in 842ms
+ GET /api/crm/live-markets 200 in 204ms
+ GET /api/crm/live-markets 200 in 33170ms
+ GET /api/crm/live-markets 200 in 5631ms
+ GET /api/crm/live-markets 200 in 3050ms
+ GET /api/crm/live-markets 200 in 9592ms
+ GET /api/crm/live-markets 200 in 552ms
+ ✓ Compiled in 39.5s (1317 modules)
+ ✓ Compiled in 17.7s (1287 modules)
+ GET /admin 200 in 1020ms
+ GET /auth/forgot-password 200 in 837ms
+ GET /auth/login 200 in 199ms
+ ○ Compiling /api/crm/state ...
+ ✓ Compiled /api/crm/state in 684ms (671 modules)
+ GET /api/crm/state?userId=admin-1 200 in 1185ms
+ GET /api/crm/state?userId=admin-1 200 in 99ms
+ ○ Compiling /api/crm/live-markets ...
+ ✓ Compiled /api/crm/live-markets in 1431ms (673 modules)
+ GET /api/crm/live-markets 200 in 1784ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 48ms
+ ○ Compiling /api/crm/login ...
+ ✓ Compiled /api/crm/login in 732ms (675 modules)
+ POST /api/crm/login 200 in 914ms
+ ○ Compiling /client ...
+ ✓ Compiled /client in 2s (1310 modules)
+ GET /api/crm/live-markets 200 in 608ms
+ GET /client 200 in 2682ms
+ GET /api/crm/state?userId=client-1 200 in 75ms
+ GET /api/crm/state?userId=client-1 200 in 103ms
+ GET /api/crm/live-markets 200 in 60ms
+ GET /api/crm/live-markets 200 in 68ms
+ GET /api/crm/live-markets 200 in 45ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 50ms
+ GET /api/crm/live-markets 200 in 97ms
+ GET / 200 in 708ms
+ GET /api/crm/live-markets 200 in 59ms
+ GET /api/crm/live-markets 200 in 81ms
+ GET /api/crm/live-markets 200 in 125ms
+ GET /auth/login 200 in 1092ms
+ GET /api/crm/live-markets 200 in 61ms
+ GET /api/crm/live-markets 200 in 55ms
+ POST /api/crm/login 200 in 67ms
+ GET /client 200 in 148ms
+ GET /api/crm/state?userId=client-1 200 in 96ms
+ GET /api/crm/state?userId=client-1 200 in 103ms
+ GET /api/crm/live-markets 200 in 108ms
+ GET /api/crm/live-markets 200 in 119ms
+ GET /api/crm/live-markets 200 in 41ms
+ ○ Compiling /client/kyc ...
+ ✓ Compiled /client/kyc in 2.1s (1312 modules)
+ GET /api/crm/live-markets 200 in 1441ms
+ GET /api/crm/live-markets 200 in 1912ms
+ GET /client/kyc 200 in 2563ms
+ GET /api/crm/live-markets 200 in 89ms
+ GET /api/crm/state?userId=client-1 200 in 71ms
+ GET /api/crm/state?userId=client-1 200 in 114ms
+ GET /api/crm/live-markets 200 in 59ms
+ GET /api/crm/live-markets 200 in 63ms
+ GET /api/crm/live-markets 200 in 37ms
+ GET /api/crm/live-markets 200 in 39ms
+ GET /api/crm/live-markets 200 in 32ms
+ GET /api/crm/live-markets 200 in 39ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 89ms
+ GET /api/crm/live-markets 200 in 44ms
+ GET /api/crm/live-markets 200 in 46ms
+ ○ Compiling /api/crm/kyc ...
+ ✓ Compiled /api/crm/kyc in 796ms (679 modules)
+ POST /api/crm/kyc 200 in 985ms
+ GET /api/crm/state?userId=client-1 200 in 89ms
+ GET /api/crm/live-markets 200 in 70ms
+ GET /api/crm/live-markets 200 in 48ms
+ ○ Compiling /admin/kyc ...
+ ✓ Compiled /admin/kyc in 1028ms (1314 modules)
+ GET /admin/kyc 200 in 1320ms
+ GET /auth/login 200 in 177ms
+ POST /api/crm/login 200 in 73ms
+ GET /admin 200 in 117ms
+ GET /api/crm/state?userId=admin-1 200 in 142ms
+ GET /api/crm/state?userId=admin-1 200 in 118ms
+ GET /api/crm/live-markets 200 in 62ms
+ GET /api/crm/live-markets 200 in 86ms
+ GET /api/crm/live-markets 200 in 38ms
+ GET /auth/login 200 in 241ms
+ POST /api/crm/login 200 in 46ms
+ GET /admin 200 in 136ms
+ GET /api/crm/state?userId=admin-1 200 in 100ms
+ GET /api/crm/state?userId=admin-1 200 in 157ms
+ GET /api/crm/live-markets 200 in 90ms
+ GET /api/crm/live-markets 200 in 105ms
+ GET /admin/kyc 200 in 118ms
+ GET /api/crm/state?userId=admin-1 200 in 128ms
+ GET /api/crm/state?userId=admin-1 200 in 117ms
+ ○ Compiling /api/crm/admin/actions ...
+ ✓ Compiled /api/crm/admin/actions in 835ms (681 modules)
+ PATCH /api/crm/admin/actions 200 in 983ms
+ GET /api/crm/state?userId=admin-1 200 in 83ms
+ GET /client 200 in 407ms
+ GET /auth/login 200 in 281ms
+ POST /api/crm/login 200 in 53ms
+ GET /client 200 in 119ms
+ GET /api/crm/state?userId=client-1 200 in 128ms
+ GET /api/crm/state?userId=client-1 200 in 165ms
+ GET /api/crm/live-markets 200 in 67ms
+ GET /api/crm/live-markets 200 in 87ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /client/kyc 200 in 111ms
+ GET /api/crm/state?userId=client-1 200 in 98ms
+ GET /api/crm/state?userId=client-1 200 in 181ms
+ ✓ Compiled /api/crm/kyc in 499ms (681 modules)
+ POST /api/crm/kyc 200 in 748ms
+ GET /api/crm/state?userId=client-1 200 in 70ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 593ms (683 modules)
+ GET /admin 200 in 849ms
+ GET /auth/login 200 in 105ms
+ POST /api/crm/login 200 in 47ms
+ GET /admin 200 in 121ms
+ GET /api/crm/state?userId=admin-1 200 in 152ms
+ GET /api/crm/state?userId=admin-1 200 in 138ms
+ GET /api/crm/live-markets 200 in 74ms
+ GET /api/crm/live-markets 200 in 92ms
+ GET /admin/kyc 200 in 122ms
+ GET /api/crm/state?userId=admin-1 200 in 105ms
+ GET /api/crm/state?userId=admin-1 200 in 156ms
+ PATCH /api/crm/admin/actions 200 in 65ms
+ GET /api/crm/state?userId=admin-1 200 in 81ms
+ ○ Compiling /admin/deposits ...
+ ✓ Compiled /admin/deposits in 1636ms (1318 modules)
+ GET /admin/deposits 200 in 1904ms
+ GET /api/crm/state?userId=admin-1 200 in 135ms
+ GET /api/crm/state?userId=admin-1 200 in 155ms
+ ○ Compiling /client/deposits ...
+ ✓ Compiled /client/deposits in 1151ms (1318 modules)
+ GET /client/deposits 200 in 1427ms
+ GET /auth/login 200 in 140ms
+ POST /api/crm/login 200 in 182ms
+ ○ Compiling /client ...
+ ✓ Compiled /client in 623ms (687 modules)
+ GET /client 200 in 1143ms
+ GET /api/crm/state?userId=client-1 200 in 156ms
+ GET /api/crm/state?userId=client-1 200 in 137ms
+ GET /api/crm/live-markets 200 in 110ms
+ GET /api/crm/live-markets 200 in 122ms
+ GET /client/deposits 200 in 119ms
+ GET /api/crm/state?userId=client-1 200 in 87ms
+ GET /api/crm/state?userId=client-1 200 in 139ms
+ ○ Compiling /api/crm/deposits ...
+ ✓ Compiled /api/crm/deposits in 600ms (687 modules)
+ POST /api/crm/deposits 200 in 834ms
+ GET /api/crm/state?userId=client-1 200 in 139ms
+ GET /admin/deposits 200 in 195ms
+ GET /auth/login 200 in 88ms
+ POST /api/crm/login 200 in 45ms
+ GET /admin 200 in 156ms
+ GET /api/crm/state?userId=admin-1 200 in 93ms
+ GET /api/crm/state?userId=admin-1 200 in 139ms
+ GET /api/crm/live-markets 200 in 80ms
+ GET /api/crm/live-markets 200 in 103ms
+ GET /admin/deposits 200 in 93ms
+ GET /api/crm/state?userId=admin-1 200 in 107ms
+ GET /api/crm/state?userId=admin-1 200 in 123ms
+ PATCH /api/crm/admin/actions 200 in 53ms
+ GET /api/crm/state?userId=admin-1 200 in 59ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 7.3s (1287 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 8575ms
+ GET /client 200 in 122ms
+ ○ Compiling /auth/login ...
+ ✓ Compiled /auth/login in 756ms (644 modules)
+ GET /auth/login 200 in 1715ms
+ GET /admin/deposits 200 in 152ms
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 14.3s
+ ○ Compiling /api/crm/state ...
+ ✓ Compiled /api/crm/state in 2.8s (59 modules)
+ GET /api/crm/state 200 in 3363ms
+ ○ Compiling / ...
+ ✓ Compiled / in 30.4s (1245 modules)
+ GET / 200 in 33057ms
+ ○ Compiling /auth/login ...
+ ✓ Compiled /auth/login in 10.4s (1258 modules)
+ GET /auth/login 200 in 12343ms
+ ○ Compiling /api/crm/login ...
+ ✓ Compiled /api/crm/login in 558ms (656 modules)
+ POST /api/crm/login 200 in 842ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 2.1s (1304 modules)
+ GET /admin 200 in 2544ms
+ ✓ Compiled /api/crm/state in 425ms (673 modules)
+ GET /api/crm/state?userId=admin-1 200 in 572ms
+ GET /api/crm/state?userId=admin-1 200 in 591ms
+ ○ Compiling /api/crm/live-markets ...
+ ✓ Compiled /api/crm/live-markets in 779ms (675 modules)
+ GET /api/crm/live-markets 200 in 941ms
+ GET /api/crm/live-markets 200 in 944ms
+ GET /api/crm/live-markets 200 in 37ms
+ ○ Compiling /admin/clients ...
+ ✓ Compiled /admin/clients in 1352ms (1310 modules)
+ GET /admin/clients 200 in 1705ms
+ GET /api/crm/state?userId=admin-1 200 in 77ms
+ GET /api/crm/state?userId=admin-1 200 in 106ms
+ ○ Compiling /admin/approvals ...
+ ✓ Compiled /admin/approvals in 1111ms (1312 modules)
+ GET /admin/approvals 200 in 1329ms
+ GET /api/crm/state?userId=admin-1 200 in 75ms
+ GET /api/crm/state?userId=admin-1 200 in 102ms
+ ○ Compiling /admin/kyc ...
+ ✓ Compiled /admin/kyc in 945ms (1314 modules)
+ GET /admin/kyc 200 in 1189ms
+ GET /api/crm/state?userId=admin-1 200 in 107ms
+ GET /api/crm/state?userId=admin-1 200 in 84ms
+ GET /admin 200 in 101ms
+ GET /api/crm/state?userId=admin-1 200 in 105ms
+ GET /api/crm/state?userId=admin-1 200 in 104ms
+ GET /api/crm/live-markets 200 in 57ms
+ GET /api/crm/live-markets 200 in 75ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 59ms
+ GET /api/crm/live-markets 200 in 54ms
+ GET /api/crm/live-markets 200 in 61ms
+ GET /api/crm/live-markets 200 in 73ms
+ GET /api/crm/live-markets 200 in 39ms
+ GET /api/crm/live-markets 200 in 45ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 36ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 77ms
+ GET /api/crm/live-markets 200 in 93ms
+ GET /api/crm/live-markets 200 in 204ms
+ GET /api/crm/live-markets 200 in 40ms
+ GET /api/crm/live-markets 200 in 216ms
+ GET /api/crm/live-markets 200 in 104ms
+ GET /api/crm/live-markets 200 in 998ms
+ GET /api/crm/live-markets 200 in 231ms
+ GET /api/crm/live-markets 200 in 234ms
+ GET /api/crm/live-markets 200 in 224ms
+ GET /api/crm/live-markets 200 in 180ms
+ GET /api/crm/live-markets 200 in 213ms
+ GET /api/crm/live-markets 200 in 418ms
+ GET /api/crm/live-markets 200 in 125ms
+ GET /api/crm/live-markets 200 in 44ms
+ GET /api/crm/live-markets 200 in 43ms
+ GET /api/crm/live-markets 200 in 55ms
+ GET /api/crm/live-markets 200 in 49ms
+ GET /api/crm/live-markets 200 in 66ms
+ GET /api/crm/live-markets 200 in 56ms
+ GET /api/crm/live-markets 200 in 61ms
+ GET /api/crm/live-markets 200 in 48ms
+ GET /api/crm/live-markets 200 in 58ms
+ GET / 200 in 621ms
+ ✓ Compiled in 14.7s (1282 modules)
+ ○ Compiling /platforms ...
+ ✓ Compiled /platforms in 5.7s (1301 modules)
+ GET /platforms 200 in 7454ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.8s (1304 modules)
+ GET /_next/static/css/app/layout.css?v=1780560113858 404 in 3744ms
+ GET /_next/static/chunks/main-app.js?v=1780560113858 404 in 3362ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 3255ms
+ ○ Compiling /_error ...
+ GET / 500 in 13418ms
+ ✓ Compiled /_error in 16.2s (1531 modules)
+ GET / 500 in 4021ms
+ ✓ Compiled in 3s (1531 modules)
+ GET / 500 in 2328ms
+ ✓ Compiled in 9.2s (1523 modules)
+ GET / 200 in 484ms
+ GET / 200 in 636ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.8s (1512 modules)
+ GET /_next/static/chunks/main-app.js?v=1780560261573 500 in 26847ms
+ GET /_next/static/chunks/app-pages-internals.js 500 in 26666ms
+ GET / 404 in 717ms
+ GET / 404 in 485ms
+ GET / 404 in 614ms
+ GET / 404 in 556ms
+ GET / 404 in 603ms
+ GET / 404 in 288ms
+ GET / 404 in 70ms
+ GET / 404 in 47ms
+ GET / 404 in 40ms
+ GET / 404 in 43ms
+ GET / 404 in 41ms
+ GET / 404 in 142ms
+ GET / 404 in 44ms
+ GET / 404 in 73ms
+ GET / 404 in 44ms
+ GET / 404 in 64ms
+ GET / 404 in 39ms
+ GET / 404 in 52ms
+ GET / 404 in 71ms
+ GET / 404 in 53ms
+ GET / 404 in 66ms
+ GET / 404 in 50ms
+ GET / 404 in 72ms
+ GET / 404 in 44ms
+ GET / 404 in 82ms
+ GET / 404 in 52ms
+ GET / 404 in 54ms
+ GET / 404 in 86ms
+ GET / 404 in 62ms
+ GET / 404 in 58ms
+ GET / 404 in 54ms
+ GET / 404 in 71ms
+ GET / 404 in 56ms
+ GET / 404 in 46ms
+ GET / 404 in 50ms
+ GET / 404 in 49ms
+ GET / 404 in 56ms
+ GET / 404 in 68ms
+ GET / 500 in 565ms
+ GET / 500 in 250ms
+ GET / 500 in 545ms
+ GET / 500 in 254ms
+ GET / 500 in 544ms
+ GET / 500 in 252ms
+ GET / 500 in 511ms
+ GET / 500 in 236ms
+ GET / 500 in 512ms
+ GET / 500 in 226ms
+ GET / 500 in 503ms
+ GET / 500 in 236ms
+ GET / 500 in 517ms
+ GET / 500 in 243ms
+ GET / 500 in 570ms
+ GET / 500 in 257ms
+ GET / 500 in 526ms
+ GET / 500 in 237ms
+ GET / 500 in 515ms
+ GET / 500 in 236ms
+ GET / 500 in 516ms
+ GET / 500 in 236ms
+ GET / 500 in 478ms
+ GET / 500 in 220ms
+ GET / 500 in 480ms
+ GET / 500 in 218ms
+ GET / 500 in 515ms
+ GET / 500 in 236ms
+ GET / 500 in 482ms
+ GET / 500 in 219ms
+ GET / 500 in 537ms
+ GET / 500 in 235ms
+ GET / 500 in 530ms
+ GET / 500 in 219ms
+ GET / 500 in 522ms
+ GET / 500 in 248ms
+ GET / 500 in 591ms
+ GET / 500 in 280ms
+ GET / 500 in 559ms
+ GET / 500 in 245ms
+ GET / 500 in 565ms
+ GET / 500 in 273ms
+ GET / 500 in 559ms
+ GET / 500 in 237ms
+ GET / 500 in 527ms
+ GET / 500 in 249ms
+ GET / 500 in 500ms
+ GET / 500 in 220ms
+ GET / 500 in 504ms
+ GET / 500 in 242ms
+ GET / 500 in 483ms
+ GET / 500 in 220ms
+ GET / 500 in 497ms
+ GET / 500 in 234ms
+ GET / 500 in 486ms
+ GET / 500 in 221ms
+ GET / 500 in 497ms
+ GET / 500 in 233ms
+ GET / 500 in 482ms
+ GET / 500 in 218ms
+ GET / 500 in 497ms
+ GET / 500 in 220ms
+ GET / 500 in 498ms
+ GET / 500 in 233ms
+ GET / 500 in 536ms
+ GET / 500 in 246ms
+ GET / 500 in 513ms
+ GET / 500 in 233ms
+ GET / 500 in 544ms
+ GET / 500 in 251ms
+ GET / 500 in 538ms
+ GET / 500 in 246ms
+ GET / 500 in 577ms
+ GET / 500 in 267ms
+ GET / 500 in 513ms
+ GET / 500 in 234ms
+ GET / 500 in 733ms
+ GET / 500 in 423ms
+ GET / 500 in 520ms
+ GET / 500 in 238ms
+ GET / 500 in 524ms
+ GET / 500 in 245ms
+ GET / 500 in 526ms
+ GET / 500 in 234ms
+ GET / 500 in 614ms
+ GET / 500 in 303ms
+ GET / 500 in 581ms
+ GET / 500 in 231ms
+ GET / 500 in 491ms
+ GET / 500 in 221ms
+ GET / 500 in 495ms
+ GET / 500 in 222ms
+ GET / 500 in 510ms
+ GET / 500 in 220ms
+ GET / 500 in 578ms
+ GET / 500 in 239ms
+ GET / 500 in 528ms
+ GET / 500 in 222ms
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 11s
+ ○ Compiling / ...
+ ✓ Compiled / in 26.5s (1243 modules)
+ GET / 200 in 22545ms
+ GET / 200 in 28367ms
+ ✓ Compiled in 9.3s (629 modules)
+ GET / 200 in 4789ms
+ ✓ Compiled in 4.3s (629 modules)
+ GET / 200 in 1021ms
+ ✓ Compiled in 782ms (629 modules)
+ GET / 200 in 641ms
+ GET / 200 in 1205ms
+ ○ Compiling /pricing ...
+ ✓ Compiled /pricing in 3.8s (1265 modules)
+ GET /pricing 200 in 5580ms
+ GET / 200 in 1038ms
+ ✓ Compiled in 2.1s (1279 modules)
+ GET / 200 in 1561ms
+ ✓ Compiled in 1569ms (1279 modules)
+ GET / 200 in 983ms
+ ✓ Compiled in 5.3s (1279 modules)
+ GET / 200 in 2503ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 18.8s (1282 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 19053ms
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 9.3s
+ ○ Compiling /api/crm/state ...
+ ✓ Compiled /api/crm/state in 2.1s (60 modules)
+ GET /api/crm/state 200 in 4496ms

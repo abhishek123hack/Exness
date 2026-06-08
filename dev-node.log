@@ -1,0 +1,28 @@
+  ▲ Next.js 14.2.35
+  - Local:        http://127.0.0.1:3000
+  - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+ ✓ Ready in 7.6s
+ ○ Compiling / ...
+ ✓ Compiled / in 45.2s (1235 modules)
+ ✓ Compiled in 3.5s (625 modules)
+ GET / 200 in 357ms
+ ✓ Compiled in 12.7s (1235 modules)
+  ▲ Next.js 14.2.35
+  - Local:        http://127.0.0.1:3000
+  - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+ ✓ Ready in 18.5s
+ ○ Compiling / ...
+ ✓ Compiled / in 64.4s (1235 modules)
+ GET / 200 in 70846ms
+ ✓ Compiled in 6.3s (625 modules)
+ GET / 200 in 2966ms
+ ✓ Compiled in 35.3s (1235 modules)
+ ✓ Compiled in 2.1s (625 modules)
+ ✓ Compiled in 2.5s (611 modules)
+ ✓ Compiled in 987ms (625 modules)
+ ✓ Compiled in 20.8s (1221 modules)
+ ✓ Compiled in 2.7s (1221 modules)
