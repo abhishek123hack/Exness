@@ -17,7 +17,8 @@ export async function POST(request: Request) {
     panNumber: String(body.panNumber),
     nameOnPan: String(body.nameOnPan),
     pdfName: String(body.pdfName),
-    pdfDataUrl: String(body.pdfDataUrl || "")
+    pdfDataUrl: String(body.pdfDataUrl || ""),
+    pdfPublicId: String(body.pdfPublicId || "")
   };
   user.kycStatus = "Pending";
 
@@ -27,6 +28,7 @@ export async function POST(request: Request) {
     existing.nameOnPan = user.panDetails.nameOnPan;
     existing.pdfName = user.panDetails.pdfName;
     existing.pdfDataUrl = user.panDetails.pdfDataUrl;
+    existing.pdfPublicId = user.panDetails.pdfPublicId;
     existing.status = "Pending";
     existing.createdAt = new Date().toISOString();
     await saveCrmStoreAsync(store);
@@ -40,6 +42,7 @@ export async function POST(request: Request) {
     nameOnPan: user.panDetails.nameOnPan,
     pdfName: user.panDetails.pdfName,
     pdfDataUrl: user.panDetails.pdfDataUrl,
+    pdfPublicId: user.panDetails.pdfPublicId,
     status: "Pending" as const,
     createdAt: new Date().toISOString()
   };

@@ -58,7 +58,7 @@ const protections = [
 
 export default function LicencesPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-navy text-white">
+    <main className="site-light relative min-h-screen overflow-hidden bg-white text-slate-950">
       <div className="aurora pointer-events-none fixed inset-0 animate-aurora opacity-70 blur-3xl" />
       <div className="grid-bg pointer-events-none fixed inset-0 animate-grid opacity-20" />
 
@@ -92,7 +92,7 @@ export default function LicencesPage() {
               <CheckCircle2 className="h-4 w-4" />
               Governance, protection and professional memberships
             </div>
-            <h1 className="max-w-5xl bg-gradient-to-r from-white via-cyan-200 to-pink-300 bg-clip-text text-5xl font-black leading-[1] text-transparent md:text-7xl">
+            <h1 className="max-w-5xl bg-gradient-to-r from-white via-cyan-200 to-pink-300 bg-clip-text text-4xl font-black leading-tight text-transparent sm:text-5xl md:text-6xl xl:text-7xl">
               Licences, Regulation and Professional Memberships
             </h1>
             <p className="mt-7 max-w-3xl text-xl leading-8 text-white/66">
@@ -143,7 +143,7 @@ export default function LicencesPage() {
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[.75fr_1.25fr]">
           <div>
             <p className="mb-3 text-sm font-black uppercase tracking-[0.28em] text-cyan-300">Protecting Client Funds</p>
-            <h2 className="text-4xl font-black md:text-6xl">Controls designed around trust.</h2>
+            <h2 className="text-4xl font-black leading-tight md:text-6xl">Controls designed around trust.</h2>
             <p className="mt-5 leading-7 text-white/58">
               As a regulated-style trading platform concept, Exness Global presents client protection, treasury separation and risk governance as visible parts of the product experience.
             </p>
@@ -168,7 +168,7 @@ export default function LicencesPage() {
           <div className="grid items-center gap-8 lg:grid-cols-[1fr_.9fr]">
             <div>
               <Award className="mb-6 h-12 w-12 text-amber-300" />
-              <h2 className="text-4xl font-black md:text-6xl">Reliable, secure and fast trading platforms.</h2>
+              <h2 className="text-4xl font-black leading-tight md:text-6xl">Reliable, secure and fast trading platforms.</h2>
               <p className="mt-5 text-lg leading-8 text-white/62">
                 Exness Global combines premium trading interfaces with a client-centric operating model focused on fair execution, transparency and professional conditions.
               </p>

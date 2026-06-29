@@ -370,7 +370,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-navy text-white">
+    <main className="site-light relative min-h-screen overflow-hidden bg-white text-slate-950">
       <AnimatePresence>
         {loading && (
           <motion.div className="fixed inset-0 z-[80] grid place-items-center bg-navy" exit={{ opacity: 0 }} transition={{ duration: 0.6 }}>
@@ -395,7 +395,7 @@ export default function Home() {
               <span className="h-2 w-2 rounded-full bg-emerald-300 shadow-green-glow" />
               AI-powered global trading infrastructure
             </div>
-            <h1 className="max-w-5xl bg-gradient-to-r from-white via-cyan-200 via-45% to-pink-300 bg-clip-text text-6xl font-black leading-[0.95] text-transparent md:text-8xl">
+            <h1 className="max-w-5xl bg-gradient-to-r from-white via-cyan-200 via-45% to-pink-300 bg-clip-text text-5xl font-black leading-tight text-transparent sm:text-6xl md:text-7xl xl:text-8xl">
               Trade The Future of Finance
             </h1>
             <p className="mt-7 max-w-2xl text-xl leading-8 text-white/68">
@@ -440,13 +440,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="platforms" className="relative overflow-hidden px-4 py-24 text-white">
+      <section id="platforms" className="relative overflow-hidden px-4 py-24">
         <div className="aurora absolute inset-0 opacity-25 blur-3xl" />
         <div className="grid-bg absolute inset-0 opacity-20" />
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-black uppercase tracking-[0.45em] text-blue-600">Platforms</p>
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-6xl">One ecosystem. Every trading style.</h2>
+            <h2 className="mt-4 text-4xl font-black leading-tight text-slate-950 md:text-6xl">One ecosystem. Every trading style.</h2>
           </div>
 
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative mx-auto mt-14 min-h-[420px] max-w-5xl">
@@ -591,7 +591,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
           <div>
             <p className="mb-3 text-sm font-black uppercase tracking-[0.28em] text-cyan-300">Mobile App</p>
-            <h2 className="text-5xl font-black md:text-7xl">Trade anywhere with cinematic speed.</h2>
+            <h2 className="text-4xl font-black leading-tight md:text-6xl">Trade anywhere with cinematic speed.</h2>
             <p className="mt-5 text-lg text-white/62">iOS and Android apps with alerts, biometric login, live positions and AI trade briefs.</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="ghost"><Apple className="mr-2 inline h-4 w-4" /> App Store</Button>
@@ -691,7 +691,7 @@ export default function Home() {
         <div className="gradient-border glass mx-auto max-w-7xl overflow-hidden rounded-[2rem] p-10 text-center md:p-16">
           <div className="aurora absolute inset-0 animate-aurora opacity-60 blur-3xl" />
           <div className="relative">
-            <h2 className="mx-auto max-w-4xl text-5xl font-black md:text-7xl">Start Your Trading Journey Today</h2>
+            <h2 className="mx-auto max-w-4xl text-4xl font-black leading-tight md:text-6xl">Start Your Trading Journey Today</h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg text-white/65">Open a live account or test every premium tool in a zero-risk demo workspace.</p>
             <div className="mt-9 flex justify-center gap-4">
               <a href="/auth/signup" className="rounded-full bg-gradient-to-r from-neonBlue via-neonPurple to-neonPink px-6 py-3 text-sm font-bold text-white shadow-pink-glow">Open Account</a>

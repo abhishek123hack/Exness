@@ -320,7 +320,7 @@ function VariantShowcase({ data }: { data: PageData }) {
 
 export function InnerPage({ data }: { data: PageData }) {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-navy text-white">
+    <main className="site-light relative min-h-screen overflow-hidden bg-white text-slate-950">
       <div className="aurora pointer-events-none fixed inset-0 animate-aurora opacity-80 blur-3xl" />
       <div className="grid-bg pointer-events-none fixed inset-0 animate-grid opacity-20" />
       <TopNav />
@@ -332,7 +332,7 @@ export function InnerPage({ data }: { data: PageData }) {
               <span className="h-2 w-2 rounded-full bg-emerald-300 shadow-green-glow" />
               {data.eyebrow}
             </div>
-            <h1 className="max-w-4xl bg-gradient-to-r from-white via-cyan-200 to-pink-300 bg-clip-text text-5xl font-black leading-[1] text-transparent md:text-7xl">
+            <h1 className="max-w-4xl bg-gradient-to-r from-white via-cyan-200 to-pink-300 bg-clip-text text-4xl font-black leading-tight text-transparent sm:text-5xl md:text-6xl xl:text-7xl">
               {data.title}
             </h1>
             <p className="mt-7 max-w-2xl text-xl leading-8 text-white/68">{data.description}</p>
@@ -381,7 +381,7 @@ export function InnerPage({ data }: { data: PageData }) {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
           <div>
             <p className="mb-3 text-sm font-black uppercase tracking-[0.28em] text-cyan-300">Platform Depth</p>
-            <h2 className="text-4xl font-black md:text-6xl">Designed for professional momentum.</h2>
+            <h2 className="text-4xl font-black leading-tight md:text-6xl">Designed for professional momentum.</h2>
           </div>
           <div className="grid gap-4">
             {data.highlights.map((item, index) => (
@@ -401,7 +401,7 @@ export function InnerPage({ data }: { data: PageData }) {
         <div className="gradient-border glass mx-auto max-w-7xl overflow-hidden rounded-[2rem] p-10 md:p-14">
           <div className="grid items-center gap-8 lg:grid-cols-[1fr_.8fr]">
             <div>
-              <h2 className="text-4xl font-black md:text-6xl">Build your trading edge with Exness Global.</h2>
+              <h2 className="text-4xl font-black leading-tight md:text-6xl">Build your trading edge with Exness Global.</h2>
               <p className="mt-5 text-lg text-white/62">Open an account, book a platform walkthrough, or launch a demo workspace today.</p>
             </div>
             <div className="flex flex-wrap justify-start gap-4 lg:justify-end">

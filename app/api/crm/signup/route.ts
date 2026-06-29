@@ -1,4 +1,5 @@
-﻿import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
 import { getCrmStoreAsync, publicUser, saveCrmStoreAsync, type CrmUser } from "@/lib/crmStore";
 
 export const dynamic = "force-dynamic";
@@ -7,9 +8,14 @@ export async function POST(request: Request) {
   const body = await request.json();
   const store = await getCrmStoreAsync();
   const email = String(body.email || "").toLowerCase().trim();
+  const password = String(body.password || "");
 
-  if (!body.fullName || !email || !body.phone || !body.country || !body.password) {
+  if (!body.fullName || !email || !body.phone || !body.country || !password) {
     return NextResponse.json({ message: "All signup fields are required." }, { status: 400 });
+  }
+
+  if (password.length < 6) {
+    return NextResponse.json({ message: "Password must be at least 6 characters." }, { status: 400 });
   }
 
   if (store.users.some((user) => user.email.toLowerCase() === email)) {
@@ -18,13 +24,13 @@ export async function POST(request: Request) {
 
   const user: CrmUser = {
     id: `client-${Date.now()}`,
-    fullName: body.fullName,
+    fullName: String(body.fullName).trim(),
     email,
-    phone: body.phone,
-    country: body.country,
-    password: body.password,
-    role: "client" as const,
-    status: "Pending Approval" as const,
+    phone: String(body.phone).trim(),
+    country: String(body.country).trim(),
+    password: await bcrypt.hash(password, 12),
+    role: "client",
+    status: "Pending Approval",
     balance: 0,
     registeredAt: new Date().toISOString(),
     dob: String(body.dob || ""),

@@ -1,0 +1,109 @@
+{
+  "users": [
+    {
+      "id": "admin-1",
+      "fullName": "Super Admin",
+      "email": "admin@exnessglobal.com",
+      "phone": "+91 00000 00000",
+      "country": "India",
+      "password": "admin123",
+      "role": "admin",
+      "status": "Approved",
+      "balance": 0,
+      "registeredAt": "2026-06-19T04:52:22.517Z",
+      "dob": "",
+      "wallet": {
+        "main": 0,
+        "trading": 0,
+        "bonus": 0,
+        "totalDeposit": 0,
+        "totalWithdrawal": 0,
+        "profitLoss": 0,
+        "frozen": false
+      },
+      "bankDetails": {
+        "bankName": "",
+        "accountNumber": "",
+        "ifsc": "",
+        "accountHolder": "",
+        "upi": ""
+      },
+      "panDetails": {
+        "panNumber": "",
+        "nameOnPan": "",
+        "pdfName": "",
+        "pdfDataUrl": ""
+      },
+      "kycStatus": "Approved",
+      "mt5Account": null
+    },
+    {
+      "id": "client-1",
+      "fullName": "Demo Client",
+      "email": "client@exnessglobal.com",
+      "phone": "+91 98765 43210",
+      "country": "India",
+      "password": "client123",
+      "role": "client",
+      "status": "Approved",
+      "balance": 0,
+      "registeredAt": "2026-06-19T04:52:22.518Z",
+      "dob": "1995-01-01",
+      "wallet": {
+        "main": 0,
+        "trading": 0,
+        "bonus": 0,
+        "totalDeposit": 0,
+        "totalWithdrawal": 0,
+        "profitLoss": 0,
+        "frozen": false
+      },
+      "bankDetails": {
+        "bankName": "HDFC Bank",
+        "accountNumber": "XXXX-2241",
+        "ifsc": "HDFC0001234",
+        "accountHolder": "Demo Client",
+        "upi": "demo@upi"
+      },
+      "panDetails": {
+        "panNumber": "ABCDE1234F",
+        "nameOnPan": "DEMO",
+        "pdfName": "image.jpg",
+        "pdfDataUrl": "https://res.cloudinary.com/dv641qlgc/image/upload/v1782464611/kyc-documents/rz5tbdq6izfkjusfmdgz.jpg"
+      },
+      "kycStatus": "Approved",
+      "mt5Account": null
+    }
+  ],
+  "deposits": [],
+  "withdrawals": [],
+  "kycDocuments": [
+    {
+      "id": "KYC-0001",
+      "userId": "client-1",
+      "panNumber": "ABCDE1234F",
+      "nameOnPan": "DEMO",
+      "pdfName": "image.jpg",
+      "pdfDataUrl": "https://res.cloudinary.com/dv641qlgc/image/upload/v1782464611/kyc-documents/rz5tbdq6izfkjusfmdgz.jpg",
+      "status": "Approved",
+      "createdAt": "2026-06-26T09:03:39.801Z",
+      "adminComment": "ok",
+      "reviewedAt": "2026-06-26T10:33:30.675Z"
+    }
+  ],
+  "transactions": [],
+  "paymentDetails": {
+    "UPI": {
+      "value": "exnessglobal@upi",
+      "note": "Pay using any UPI app and upload UTR/screenshot."
+    },
+    "Bank Transfer": {
+      "value": "Exness Global Client Funding - A/C 44551000",
+      "note": "IFSC: EXNS0001234, Branch: Mumbai, Account Type: Current"
+    },
+    "USDT": {
+      "value": "TExness93DemoWalletTRC20Address",
+      "note": "Send only USDT TRC20 and upload transaction hash."
+    }
+  }
+}

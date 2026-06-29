@@ -1,6 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
-import mongoose from "mongoose";
 import path from "path";
+import bcrypt from "bcryptjs";
+import { cleanDoc, connectCrmMongo, CrmModels } from "@/lib/crmModels";
 
 export type CrmRole = "client" | "admin";
 export type AccountStatus = "Pending Approval" | "Approved" | "Rejected" | "Suspended";
@@ -30,6 +31,7 @@ export type PanDetails = {
   nameOnPan: string;
   pdfName: string;
   pdfDataUrl: string;
+  pdfPublicId?: string;
 };
 
 export type Mt5Account = {
@@ -69,8 +71,11 @@ export type DepositRequest = {
   screenshotUrl: string;
   proofName: string;
   proofDataUrl: string;
+  proofPublicId?: string;
   status: RequestStatus;
   createdAt: string;
+  adminComment?: string;
+  reviewedAt?: string;
 };
 
 export type WithdrawalRequest = {
@@ -90,8 +95,11 @@ export type KycDocument = {
   nameOnPan: string;
   pdfName: string;
   pdfDataUrl: string;
+  pdfPublicId?: string;
   status: KycStatus;
   createdAt: string;
+  adminComment?: string;
+  reviewedAt?: string;
 };
 
 export type Transaction = {
@@ -120,7 +128,6 @@ type Store = {
 };
 
 const globalStore = globalThis as typeof globalThis & { exnessCrmStore?: Store };
-const globalMongo = globalThis as typeof globalThis & { exnessCrmMongo?: Promise<typeof mongoose> };
 
 const emptyWallet: Wallet = {
   main: 0,
@@ -222,40 +229,40 @@ function loadCrmStoreFromDisk() {
   }
 }
 
-async function connectMongo() {
-  const uri = process.env.MONGO_URI?.trim();
-  if (!uri || (!uri.startsWith("mongodb://") && !uri.startsWith("mongodb+srv://"))) return null;
-  if (!globalMongo.exnessCrmMongo) {
-    globalMongo.exnessCrmMongo = mongoose.connect(uri);
-  }
-  return globalMongo.exnessCrmMongo;
-}
-
-function crmStoreModel() {
-  const schema = new mongoose.Schema(
-    {
-      key: { type: String, required: true, unique: true },
-      data: { type: mongoose.Schema.Types.Mixed, required: true }
-    },
-    { timestamps: true, collection: "crm_store" }
-  );
-  return mongoose.models.CrmStore || mongoose.model("CrmStore", schema);
-}
-
 async function loadCrmStoreFromMongo() {
   try {
-    const connection = await connectMongo();
+    const connection = await connectCrmMongo();
     if (!connection) return null;
-    const Model = crmStoreModel();
-    const doc = await Model.findOne({ key: "main" }).lean();
-    if (!doc || !("data" in doc)) {
+
+    const userCount = await CrmModels.User.countDocuments();
+    if (userCount === 0) {
       const fresh = defaultStore();
-      await Model.updateOne({ key: "main" }, { $set: { data: fresh } }, { upsert: true });
-      return fresh;
+      const seededUsers = await Promise.all(fresh.users.map(async (user) => ({
+        ...user,
+        password: await bcrypt.hash(user.password, 12)
+      })));
+      await CrmModels.User.insertMany(seededUsers);
+      await CrmModels.PaymentDetails.updateOne({ key: "main" }, { $set: { data: fresh.paymentDetails } }, { upsert: true });
     }
-    return normalizeStore((doc as unknown as { data: Store }).data);
+
+    const [users, deposits, withdrawals, kycDocuments, transactions, paymentDetails] = await Promise.all([
+      CrmModels.User.find({}).sort({ createdAt: -1 }).lean(),
+      CrmModels.Deposit.find({}).sort({ createdAt: -1 }).lean(),
+      CrmModels.Withdrawal.find({}).sort({ createdAt: -1 }).lean(),
+      CrmModels.Kyc.find({}).sort({ createdAt: -1 }).lean(),
+      CrmModels.Transaction.find({}).sort({ createdAt: -1 }).lean(),
+      CrmModels.PaymentDetails.findOne({ key: "main" }).lean()
+    ]);
+
+    return normalizeStore({
+      users: cleanDoc(users) as unknown as CrmUser[],
+      deposits: cleanDoc(deposits) as unknown as DepositRequest[],
+      withdrawals: cleanDoc(withdrawals) as unknown as WithdrawalRequest[],
+      kycDocuments: cleanDoc(kycDocuments) as unknown as KycDocument[],
+      transactions: cleanDoc(transactions) as unknown as Transaction[],
+      paymentDetails: (cleanDoc(paymentDetails || {}) as { data?: PaymentDetails }).data || defaultStore().paymentDetails
+    });
   } catch {
-    globalMongo.exnessCrmMongo = undefined;
     return null;
   }
 }
@@ -284,21 +291,40 @@ export async function getCrmStoreAsync() {
 
 export async function saveCrmStoreAsync(store = getCrmStore()) {
   try {
-    const connection = await connectMongo();
+    const connection = await connectCrmMongo();
     if (connection) {
-      const Model = crmStoreModel();
-      await Model.updateOne({ key: "main" }, { $set: { data: store } }, { upsert: true });
+      await syncCollection(CrmModels.User, store.users);
+      await syncCollection(CrmModels.Deposit, store.deposits);
+      await syncCollection(CrmModels.Withdrawal, store.withdrawals);
+      await syncCollection(CrmModels.Kyc, store.kycDocuments);
+      await syncCollection(CrmModels.Transaction, store.transactions);
+      await CrmModels.PaymentDetails.updateOne({ key: "main" }, { $set: { data: store.paymentDetails } }, { upsert: true });
       globalStore.exnessCrmStore = store;
       return;
     }
   } catch {
-    globalMongo.exnessCrmMongo = undefined;
   }
   try {
     saveCrmStore(store);
   } catch {
     globalStore.exnessCrmStore = store;
   }
+}
+
+async function syncCollection(model: { deleteMany: Function; bulkWrite: Function }, items: { id: string }[]) {
+  const ids = items.map((item) => item.id);
+  await model.deleteMany({ id: { $nin: ids } });
+  if (items.length === 0) return;
+  await model.bulkWrite(
+    items.map((item) => ({
+      updateOne: {
+        filter: { id: item.id },
+        update: { $set: item },
+        upsert: true
+      }
+    })),
+    { ordered: false }
+  );
 }
 
 export function publicUser(user: CrmUser) {

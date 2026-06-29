@@ -23,6 +23,7 @@ export async function POST(request: Request) {
     screenshotUrl: String(body.screenshotUrl || ""),
     proofName: String(body.proofName || body.screenshotUrl || ""),
     proofDataUrl: String(body.proofDataUrl || ""),
+    proofPublicId: String(body.proofPublicId || ""),
     status: "Pending" as const,
     createdAt: new Date().toISOString()
   };

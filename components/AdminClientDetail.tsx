@@ -18,6 +18,14 @@ function money(value = 0) {
   return `$${Number(value).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
+function formatDateTime(value?: string) {
+  if (!value) return "-";
+  return new Date(value).toLocaleString("en-IN", {
+    dateStyle: "medium",
+    timeStyle: "short"
+  });
+}
+
 function Badge({ value }: { value: string }) {
   const good = value.toLowerCase().includes("approved") || value.toLowerCase().includes("paid");
   const bad = value.toLowerCase().includes("reject") || value.toLowerCase().includes("suspend");
@@ -109,7 +117,7 @@ export function AdminClientDetail({ clientId }: { clientId: string }) {
             <Info title="Personal Information" rows={[["Name", client.fullName], ["Email", client.email], ["Phone", client.phone], ["Country", client.country], ["DOB", client.dob || "Not set"], ["Registration Date", new Date(client.registeredAt).toLocaleDateString()], ["Account Status", client.status]]} />
             <Info title="Funds & Wallet" rows={[["Total Fund", money(client.wallet.main)], ["Trading Balance", money(client.wallet.trading)], ["Bonus", money(client.wallet.bonus)], ["Total Deposit", money(client.wallet.totalDeposit)], ["Total Withdrawal", money(client.wallet.totalWithdrawal)], ["Frozen", client.wallet.frozen ? "Yes" : "No"]]} />
             <Info title="Bank & UPI Details" rows={[["Bank", client.bankDetails.bankName || "Not set"], ["Account", client.bankDetails.accountNumber || "Not set"], ["IFSC", client.bankDetails.ifsc || "Not set"], ["UPI", client.bankDetails.upi || "Not set"]]} />
-            <Info title="PAN & KYC" rows={[["PAN", client.panDetails.panNumber || "Not set"], ["PAN Name", client.panDetails.nameOnPan || "Not set"], ["PAN PDF", client.panDetails.pdfName || "Not uploaded"], ["KYC Status", client.kycStatus], ["Latest KYC Request", kyc?.id || "None"]]} />
+            <Info title="PAN & KYC" rows={[["PAN", client.panDetails.panNumber || "Not set"], ["PAN Name", client.panDetails.nameOnPan || "Not set"], ["PAN PDF", client.panDetails.pdfName || "Not uploaded"], ["KYC Status", client.kycStatus], ["Latest KYC Request", kyc?.id || "None"], ["KYC Submitted", formatDateTime(kyc?.createdAt)], ["Admin Comment", kyc?.adminComment || "-"]]} />
           </div>
 
           <div className="grid gap-5 lg:grid-cols-2">
@@ -136,7 +144,7 @@ export function AdminClientDetail({ clientId }: { clientId: string }) {
             </section>
           </div>
 
-          <MiniList title="Deposits" headers={["ID", "Amount", "Status"]} rows={deposits.map((item) => [item.id, money(item.amount), item.status])} />
+          <MiniList title="Deposits" headers={["ID", "Amount", "Submitted", "Admin Comment", "Status"]} rows={deposits.map((item) => [item.id, money(item.amount), formatDateTime(item.createdAt), item.adminComment || "-", item.status])} />
           <MiniList title="Withdrawals" headers={["ID", "Amount", "Status"]} rows={withdrawals.map((item) => [item.id, money(item.amount), item.status])} />
           <MiniList title="Transactions" headers={["ID", "Type", "Amount", "Status"]} rows={transactions.map((item) => [item.id, item.type, money(item.amount), item.status])} />
         </div>

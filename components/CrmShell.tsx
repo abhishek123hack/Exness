@@ -46,6 +46,14 @@ function money(value = 0) {
   return `$${Number(value).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
+function formatDateTime(value?: string) {
+  if (!value) return "-";
+  return new Date(value).toLocaleString("en-IN", {
+    dateStyle: "medium",
+    timeStyle: "short"
+  });
+}
+
 function Badge({ value }: { value: string }) {
   const lower = value.toLowerCase();
   const cls = lower.includes("approved") || lower.includes("active") || lower.includes("paid")
@@ -87,16 +95,76 @@ function Field({ value, setValue, placeholder, type = "text" }: { value: string;
 
 const darkSelect = "rounded border border-slate-700 bg-[#0b1b33] px-4 py-3 text-sm text-white outline-none focus:border-blue-400";
 
-function readProofFile(file: File, callback: (name: string, dataUrl: string) => void) {
-  const reader = new FileReader();
-  reader.onload = () => callback(file.name, String(reader.result || ""));
-  reader.readAsDataURL(file);
+async function uploadProofFile(
+  file: File,
+  callback: (name: string, url: string, publicId: string) => void,
+  onProgress?: (progress: number) => void
+) {
+  const allowed = ["image/jpeg", "image/png", "application/pdf"];
+  if (!allowed.includes(file.type)) {
+    alert("Only JPG, JPEG, PNG and PDF files are allowed.");
+    return;
+  }
+  if (file.size > 10 * 1024 * 1024) {
+    alert("Maximum upload size is 10MB.");
+    return;
+  }
+
+  const uploadFile = file.type.startsWith("image/") ? await compressImage(file) : file;
+  const formData = new FormData();
+  formData.append("file", uploadFile);
+  formData.append("folder", "exness-crm-documents");
+
+  const data = await new Promise<{ url?: string; publicId?: string; error?: string }>((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "/api/crm/upload");
+    xhr.upload.onprogress = (event) => {
+      if (event.lengthComputable) onProgress?.(Math.round((event.loaded / event.total) * 100));
+    };
+    xhr.onload = () => {
+      try {
+        resolve(JSON.parse(xhr.responseText));
+      } catch {
+        reject(new Error("Upload response failed."));
+      }
+    };
+    xhr.onerror = () => reject(new Error("Upload failed."));
+    xhr.send(formData);
+  });
+
+  if (!data.url) {
+    alert(data.error || "Upload failed");
+    return;
+  }
+
+  onProgress?.(100);
+  callback(file.name, data.url, data.publicId || "");
+}
+
+async function compressImage(file: File) {
+  if (file.size < 900 * 1024) return file;
+  const bitmap = await createImageBitmap(file);
+  const scale = Math.min(1, 1600 / Math.max(bitmap.width, bitmap.height));
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.round(bitmap.width * scale);
+  canvas.height = Math.round(bitmap.height * scale);
+  const context = canvas.getContext("2d");
+  if (!context) return file;
+  context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/jpeg", 0.82));
+  if (!blob) return file;
+  return new File([blob], file.name.replace(/\.(png|jpg|jpeg)$/i, ".jpg"), { type: "image/jpeg" });
 }
 
 function ProofPreview({ name, dataUrl }: { name: string; dataUrl?: string }) {
   if (!name && !dataUrl) return <span>-</span>;
   if (!dataUrl) return <span>{name}</span>;
-  const isImage = dataUrl.startsWith("data:image/");
+  const isImage =
+  dataUrl.includes(".jpg") ||
+  dataUrl.includes(".jpeg") ||
+  dataUrl.includes(".png") ||
+  dataUrl.includes(".webp") ||
+  dataUrl.includes("/image/");
   return (
     <a href={dataUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-blue-600 underline">
       {isImage ? <img src={dataUrl} alt={name} className="h-12 w-12 rounded object-cover" /> : null}
@@ -202,11 +270,13 @@ function ClientDeposits({ user, state, reload }: { user: Omit<CrmUser, "password
   const [screenshotUrl, setScreenshotUrl] = useState("");
   const [proofName, setProofName] = useState("");
   const [proofDataUrl, setProofDataUrl] = useState("");
+  const [proofPublicId, setProofPublicId] = useState("");
+  const [uploadProgress, setUploadProgress] = useState(0);
   const [message, setMessage] = useState("");
   const ownDeposits = state.deposits.filter((item) => item.userId === user.id);
 
   async function submit() {
-    const res = await fetch("/api/crm/deposits", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ userId: user.id, method, amount, transactionId, screenshotUrl, proofName, proofDataUrl }) });
+    const res = await fetch("/api/crm/deposits", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ userId: user.id, method, amount, transactionId, screenshotUrl, proofName, proofDataUrl, proofPublicId }) });
     const data = await res.json();
     setMessage(data.message);
     if (res.ok) { setAmount(""); setTransactionId(""); setScreenshotUrl(""); setProofName(""); setProofDataUrl(""); reload(); }
@@ -236,11 +306,23 @@ function ClientDeposits({ user, state, reload }: { user: Omit<CrmUser, "password
           <Field value={screenshotUrl} setValue={setScreenshotUrl} placeholder="Screenshot / proof URL or file name" />
           <label className="rounded border border-slate-700 bg-[#0b1b33] px-4 py-3 text-sm text-white">
             <span className="block text-white/70">Select payment proof: JPG, JPEG, PNG, PDF</span>
-            <input accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf" type="file" className="mt-2 block w-full text-sm text-white file:mr-4 file:rounded file:border-0 file:bg-blue-600 file:px-3 file:py-2 file:text-white" onChange={(event) => {
-              const file = event.target.files?.[0];
-              if (file) readProofFile(file, (name, dataUrl) => { setProofName(name); setProofDataUrl(dataUrl); setScreenshotUrl(name); });
-            }} />
+           <input
+  accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf"
+  type="file"
+  className="mt-2 block w-full text-sm text-white file:mr-4 file:rounded file:border-0 file:bg-blue-600 file:px-3 file:py-2 file:text-white"
+  onChange={(event) => {
+    const file = event.target.files?.[0];
+
+    if (file) uploadProofFile(file, (name, url, publicId) => {
+      setProofName(name);
+      setProofDataUrl(url);
+      setProofPublicId(publicId);
+      setScreenshotUrl(url);
+    }, setUploadProgress);
+  }}
+/>
             {proofName && <span className="mt-2 block text-xs text-green-300">{proofName} selected</span>}
+            {uploadProgress > 0 && uploadProgress < 100 && <span className="mt-2 block text-xs text-cyan-200">Uploading {uploadProgress}%</span>}
           </label>
         </div>
         <button onClick={submit} className="mt-4 rounded bg-blue-600 px-5 py-3 text-sm font-semibold text-white">Submit Deposit</button>
@@ -311,10 +393,12 @@ function ClientKyc({ user, state, reload }: { user: Omit<CrmUser, "password">; s
   const [nameOnPan, setNameOnPan] = useState(user.panDetails.nameOnPan);
   const [pdfName, setPdfName] = useState(user.panDetails.pdfName);
   const [pdfDataUrl, setPdfDataUrl] = useState(user.panDetails.pdfDataUrl);
+  const [pdfPublicId, setPdfPublicId] = useState(user.panDetails.pdfPublicId || "");
+  const [uploadProgress, setUploadProgress] = useState(0);
   const [message, setMessage] = useState("");
   const ownKyc = state.kycDocuments.find((item) => item.userId === user.id);
   async function submit() {
-    const res = await fetch("/api/crm/kyc", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ userId: user.id, panNumber, nameOnPan, pdfName, pdfDataUrl }) });
+    const res = await fetch("/api/crm/kyc", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ userId: user.id, panNumber, nameOnPan, pdfName, pdfDataUrl, pdfPublicId }) });
     const data = await res.json();
     setMessage(data.message);
     if (res.ok) reload();
@@ -329,10 +413,16 @@ function ClientKyc({ user, state, reload }: { user: Omit<CrmUser, "password">; s
           <label className="rounded border border-slate-700 bg-[#0b1b33] px-4 py-3 text-sm text-white">
             <span className="block text-white/70">Select PAN file: JPG, JPEG, PNG, PDF</span>
             <input accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf" type="file" className="mt-2 block w-full text-sm text-white file:mr-4 file:rounded file:border-0 file:bg-blue-600 file:px-3 file:py-2 file:text-white" onChange={(event) => {
-              const file = event.target.files?.[0];
-              if (file) readProofFile(file, (name, dataUrl) => { setPdfName(name); setPdfDataUrl(dataUrl); });
-            }} />
+                const file = event.target.files?.[0];
+  if (file) uploadProofFile(file, (name, url, publicId) => {
+    setPdfName(name);
+    setPdfDataUrl(url);
+    setPdfPublicId(publicId);
+  }, setUploadProgress);
+}}
+/>
             {pdfName && <span className="mt-2 block text-xs text-green-300">{pdfName} selected</span>}
+            {uploadProgress > 0 && uploadProgress < 100 && <span className="mt-2 block text-xs text-cyan-200">Uploading {uploadProgress}%</span>}
           </label>
         </div>
         <button onClick={submit} className="mt-4 rounded bg-blue-600 px-5 py-3 text-sm font-semibold text-white">Submit KYC</button>
@@ -341,6 +431,10 @@ function ClientKyc({ user, state, reload }: { user: Omit<CrmUser, "password">; s
       <section className="rounded border border-slate-200 bg-white p-5 shadow-sm">
         <h2 className="text-lg font-bold">KYC Status Tracker</h2>
         <div className="mt-4 flex flex-wrap items-center gap-3"><Badge value={ownKyc?.status || user.kycStatus} /><ProofPreview name={ownKyc?.pdfName || user.panDetails.pdfName || "No file submitted yet"} dataUrl={ownKyc?.pdfDataUrl || user.panDetails.pdfDataUrl} /></div>
+        <div className="mt-4 grid gap-2 text-sm text-slate-600">
+          <p><strong className="text-slate-900">Submitted:</strong> {formatDateTime(ownKyc?.createdAt)}</p>
+          <p><strong className="text-slate-900">Admin Comment:</strong> {ownKyc?.adminComment || "-"}</p>
+        </div>
       </section>
     </div>
   );
@@ -370,7 +464,7 @@ function Info({ title, rows }: { title: string; rows: string[][] }) {
 }
 
 function RequestTable({ type, deposits = [], withdrawals = [] }: { type: "deposit" | "withdrawal"; deposits?: DepositRequest[]; withdrawals?: WithdrawalRequest[] }) {
-  if (type === "deposit") return <ShellTable headers={["ID", "Method", "Amount", "Transaction", "Proof", "Status"]}>{deposits.map((item) => <tr key={item.id} className="border-t border-slate-100"><td className="px-5 py-4 font-semibold">{item.id}</td><td>{item.method}</td><td>{money(item.amount)}</td><td>{item.transactionId}</td><td><ProofPreview name={item.proofName || item.screenshotUrl} dataUrl={item.proofDataUrl} /></td><td><Badge value={item.status} /></td></tr>)}</ShellTable>;
+  if (type === "deposit") return <ShellTable headers={["ID", "Method", "Amount", "Transaction", "Proof", "Submitted", "Admin Comment", "Status"]}>{deposits.map((item) => <tr key={item.id} className="border-t border-slate-100"><td className="px-5 py-4 font-semibold">{item.id}</td><td>{item.method}</td><td>{money(item.amount)}</td><td>{item.transactionId}</td><td><ProofPreview name={item.proofName || item.screenshotUrl} dataUrl={item.proofDataUrl} /></td><td>{formatDateTime(item.createdAt)}</td><td>{item.adminComment || "-"}</td><td><Badge value={item.status} /></td></tr>)}</ShellTable>;
   return <ShellTable headers={["ID", "Amount", "Payout", "Note", "Status"]}>{withdrawals.map((item) => <tr key={item.id} className="border-t border-slate-100"><td className="px-5 py-4 font-semibold">{item.id}</td><td>{money(item.amount)}</td><td>{item.payoutMethod}</td><td>{item.note || "-"}</td><td><Badge value={item.status} /></td></tr>)}</ShellTable>;
 }
 
@@ -438,8 +532,8 @@ function AdminDeposits({ state, action }: { state: CrmState; action: (body: Reco
         <button onClick={() => action({ action: "payment-details", method, value, note })} className="mt-4 rounded bg-slate-900 px-5 py-3 text-sm font-semibold text-white">Save Details</button>
       </section>
       {state.deposits.length === 0 ? <Empty text="No deposit requests. Client deposit submit karega to yahan approve/reject action ayega." /> : (
-        <ShellTable headers={["ID", "Client", "Method", "Amount", "TXN", "Proof", "Status", "Actions"]}>
-          {state.deposits.map((item) => <tr key={item.id} className="border-t border-slate-100"><td className="px-5 py-4 font-semibold">{item.id}</td><td>{state.clients.find((u) => u.id === item.userId)?.fullName}</td><td>{item.method}</td><td>{money(item.amount)}</td><td>{item.transactionId}</td><td><ProofPreview name={item.proofName || item.screenshotUrl} dataUrl={item.proofDataUrl} /></td><td><Badge value={item.status} /></td><td className="space-x-2"><button onClick={() => action({ action: "deposit-status", id: item.id, status: "Approved" })} className="rounded bg-green-600 px-3 py-2 text-xs font-semibold text-white">Approve</button><button onClick={() => action({ action: "deposit-status", id: item.id, status: "Rejected" })} className="rounded bg-red-600 px-3 py-2 text-xs font-semibold text-white">Reject</button></td></tr>)}
+        <ShellTable headers={["ID", "Client", "Method", "Amount", "TXN", "Proof", "Submitted", "Comment", "Status", "Actions"]}>
+          {state.deposits.map((item) => <tr key={item.id} className="border-t border-slate-100"><td className="px-5 py-4 font-semibold">{item.id}</td><td>{state.clients.find((u) => u.id === item.userId)?.fullName}</td><td>{item.method}</td><td>{money(item.amount)}</td><td>{item.transactionId}</td><td><ProofPreview name={item.proofName || item.screenshotUrl} dataUrl={item.proofDataUrl} /></td><td>{formatDateTime(item.createdAt)}</td><td>{item.adminComment || "-"}</td><td><Badge value={item.status} /></td><td><AdminReviewActions defaultComment={item.adminComment} onSubmit={(status, adminComment) => action({ action: "deposit-status", id: item.id, status, adminComment })} actions={[["Approved", "Approve", "bg-green-600"], ["Rejected", "Reject", "bg-red-600"]]} /></td></tr>)}
         </ShellTable>
       )}
     </div>
@@ -456,9 +550,21 @@ function AdminWithdrawals({ state, action }: { state: CrmState; action: (body: R
 
 function AdminKyc({ state, action }: { state: CrmState; action: (body: Record<string, unknown>) => void }) {
   return state.kycDocuments.length === 0 ? <Empty text="No KYC requests. Demo client KYC submit karega to yahan approve/reject hoga." /> : (
-    <ShellTable headers={["ID", "Client", "PAN", "File Preview", "Status", "Actions"]}>
-      {state.kycDocuments.map((item) => <tr key={item.id} className="border-t border-slate-100"><td className="px-5 py-4 font-semibold">{item.id}</td><td>{state.clients.find((u) => u.id === item.userId)?.fullName}</td><td>{item.panNumber}</td><td><ProofPreview name={item.pdfName} dataUrl={item.pdfDataUrl} /></td><td><Badge value={item.status} /></td><td className="space-x-2"><button onClick={() => action({ action: "kyc-status", id: item.id, status: "Approved" })} className="rounded bg-green-600 px-3 py-2 text-xs font-semibold text-white">Approve</button><button onClick={() => action({ action: "kyc-status", id: item.id, status: "Rejected" })} className="rounded bg-red-600 px-3 py-2 text-xs font-semibold text-white">Reject</button><button onClick={() => action({ action: "kyc-status", id: item.id, status: "Reupload Requested" })} className="rounded bg-amber-500 px-3 py-2 text-xs font-semibold text-white">Reupload</button></td></tr>)}
+    <ShellTable headers={["ID", "Client", "PAN", "File Preview", "Submitted", "Comment", "Status", "Actions"]}>
+      {state.kycDocuments.map((item) => <tr key={item.id} className="border-t border-slate-100"><td className="px-5 py-4 font-semibold">{item.id}</td><td>{state.clients.find((u) => u.id === item.userId)?.fullName}</td><td>{item.panNumber}</td><td><ProofPreview name={item.pdfName} dataUrl={item.pdfDataUrl} /></td><td>{formatDateTime(item.createdAt)}</td><td>{item.adminComment || "-"}</td><td><Badge value={item.status} /></td><td><AdminReviewActions defaultComment={item.adminComment} onSubmit={(status, adminComment) => action({ action: "kyc-status", id: item.id, status, adminComment })} actions={[["Approved", "Approve", "bg-green-600"], ["Rejected", "Reject", "bg-red-600"], ["Reupload Requested", "Reupload", "bg-amber-500"]]} /></td></tr>)}
     </ShellTable>
+  );
+}
+
+function AdminReviewActions({ defaultComment = "", onSubmit, actions }: { defaultComment?: string; onSubmit: (status: string, adminComment: string) => void; actions: [string, string, string][] }) {
+  const [adminComment, setAdminComment] = useState(defaultComment);
+  return (
+    <div className="grid min-w-[220px] gap-2">
+      <input value={adminComment} onChange={(event) => setAdminComment(event.target.value)} className="rounded border border-slate-300 bg-white px-3 py-2 text-xs text-slate-900 outline-none focus:border-blue-500" placeholder="Admin comment" />
+      <div className="flex flex-wrap gap-2">
+        {actions.map(([status, label, color]) => <button key={status} onClick={() => onSubmit(status, adminComment)} className={`rounded px-3 py-2 text-xs font-semibold text-white ${color}`}>{label}</button>)}
+      </div>
+    </div>
   );
 }
 
@@ -553,9 +659,12 @@ export function CrmShell({ mode, page = "dashboard" }: { mode: Mode; page?: Page
   }, [mode]);
 
   const currentUser = useMemo(() => {
-    if (!state || !loginUser) return null;
-    return state.users.find((item) => item.id === loginUser.id) || loginUser;
-  }, [state, loginUser]);
+  if (!state || !loginUser) return null;
+
+  const users = state.users || [];
+
+  return users.find((item) => item.id === loginUser.id) || loginUser;
+}, [state, loginUser]);
 
   if (!authChecked) return <main className="grid min-h-screen place-items-center bg-slate-100 text-slate-700">Checking login...</main>;
   if (!allowed) return <main className="grid min-h-screen place-items-center bg-slate-100 px-4 text-slate-900"><section className="w-full max-w-md rounded border border-slate-200 bg-white p-6 text-center shadow-sm"><h1 className="text-2xl font-bold">Login Required</h1><p className="mt-3 text-sm text-slate-500">Valid email aur password se login zaroori hai.</p><a href="/auth/login" className="mt-5 inline-block rounded bg-blue-600 px-5 py-3 text-sm font-semibold text-white">Go to Login</a></section></main>;

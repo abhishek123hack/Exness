@@ -42,11 +42,13 @@ export async function PATCH(request: Request) {
     if (!user) return NextResponse.json({ message: "Client not found." }, { status: 404 });
     const previous = deposit.status;
     deposit.status = body.status as RequestStatus;
+    deposit.adminComment = String(body.adminComment || "");
+    deposit.reviewedAt = new Date().toISOString();
     if (body.status === "Approved" && previous !== "Approved") {
       user.wallet.main += deposit.amount;
       user.wallet.totalDeposit += deposit.amount;
       user.balance = user.wallet.main;
-      store.transactions.unshift({ id: makeId("TXN", store.transactions.length), userId: user.id, type: "Deposit", amount: deposit.amount, note: deposit.method, status: "Approved", createdAt: new Date().toISOString() });
+      store.transactions.unshift({ id: makeId("TXN", store.transactions.length), userId: user.id, type: "Deposit", amount: deposit.amount, note: deposit.adminComment ? `${deposit.method} - ${deposit.adminComment}` : deposit.method, status: "Approved", createdAt: new Date().toISOString() });
     }
     await saveCrmStoreAsync(store);
     return NextResponse.json({ message: `Deposit ${deposit.status}.`, deposit, user: publicUser(user) });
@@ -75,6 +77,8 @@ export async function PATCH(request: Request) {
     const user = store.users.find((item) => item.id === kyc.userId);
     if (!user) return NextResponse.json({ message: "Client not found." }, { status: 404 });
     kyc.status = body.status;
+    kyc.adminComment = String(body.adminComment || "");
+    kyc.reviewedAt = new Date().toISOString();
     user.kycStatus = body.status;
     await saveCrmStoreAsync(store);
     return NextResponse.json({ message: `KYC ${kyc.status}.`, kyc, user: publicUser(user) });

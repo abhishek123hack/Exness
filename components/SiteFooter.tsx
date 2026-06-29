@@ -51,7 +51,7 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
 
 export function SiteFooter() {
   return (
-    <footer className="relative z-10 overflow-hidden border-t border-white/10 bg-[#050816] text-white">
+    <footer className="site-light-footer relative z-10 overflow-hidden border-t border-slate-200 bg-white text-slate-950">
       <div className="aurora absolute inset-0 opacity-30 blur-3xl" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-16 md:grid-cols-2 xl:grid-cols-[1.15fr_.85fr_1.15fr_1fr]">
         <div>

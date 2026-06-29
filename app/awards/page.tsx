@@ -42,7 +42,7 @@ const categories = [
 
 export default function AwardsPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-navy text-white">
+    <main className="site-light relative min-h-screen overflow-hidden bg-white text-slate-950">
       <div className="aurora pointer-events-none fixed inset-0 animate-aurora opacity-70 blur-3xl" />
       <div className="grid-bg pointer-events-none fixed inset-0 animate-grid opacity-20" />
 
@@ -76,7 +76,7 @@ export default function AwardsPage() {
               <Medal className="h-4 w-4" />
               Celebrating excellence
             </div>
-            <h1 className="max-w-5xl bg-gradient-to-r from-white via-cyan-200 to-pink-300 bg-clip-text text-5xl font-black leading-[1] text-transparent md:text-7xl">
+            <h1 className="max-w-5xl bg-gradient-to-r from-white via-cyan-200 to-pink-300 bg-clip-text text-4xl font-black leading-tight text-transparent sm:text-5xl md:text-6xl xl:text-7xl">
               Our Journey to Becoming a World-Class Broker
             </h1>
             <p className="mt-7 max-w-3xl text-xl leading-8 text-white/66">
@@ -121,7 +121,7 @@ export default function AwardsPage() {
       <section className="relative px-4 py-16">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_.85fr]">
           <div>
-            <h2 className="text-4xl font-black md:text-6xl">
+            <h2 className="text-4xl font-black leading-tight md:text-6xl">
               At Exness Global, we are not just participating in the world of trading. We are leading it.
             </h2>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-white/62">
