@@ -55,7 +55,7 @@ export function AdminClientDetail({ clientId }: { clientId: string }) {
   const [balance, setBalance] = useState("0");
 
   async function load() {
-    const res = await fetch("/api/crm/state", { cache: "no-store" });
+    const res = await fetch(`/api/crm/state?mode=admin&page=client-detail&clientId=${encodeURIComponent(clientId)}`, { cache: "no-store" });
     const data = await res.json();
     setState(data);
     const current = data.clients.find((item: SafeUser) => item.id === clientId);

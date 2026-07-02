@@ -47,7 +47,7 @@ export function AuthScreen({ type }: { type: keyof typeof copy }) {
 
     try {
       if (type === "signup") {
-        const response = await fetch("/api/crm/signup", {
+        const response = await fetch("/api/auth/register", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(form)
@@ -56,7 +56,7 @@ export function AuthScreen({ type }: { type: keyof typeof copy }) {
         setError(!response.ok);
         setMessage(data.message || "Signup submitted.");
       } else if (type === "login") {
-        const response = await fetch("/api/crm/login", {
+        const response = await fetch("/api/auth/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email: form.email, password: form.password })
@@ -74,7 +74,7 @@ export function AuthScreen({ type }: { type: keyof typeof copy }) {
       }
     } catch {
       setError(true);
-      setMessage("API is not responding. Please check Netlify Functions and MONGO_URI settings.");
+      setMessage("API is not responding. Please check deployment functions and MONGODB_URI settings.");
     } finally {
       setLoading(false);
     }

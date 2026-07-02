@@ -1,19 +1,12 @@
 import mongoose from "mongoose";
-
-const globalMongo = globalThis as typeof globalThis & { exnessCrmMongo?: Promise<typeof mongoose> };
+import { connectMongoDB, hasMongoUri } from "@/lib/mongodb";
 
 export function hasValidMongoUri() {
-  const uri = process.env.MONGO_URI?.trim();
-  return Boolean(uri && (uri.startsWith("mongodb://") || uri.startsWith("mongodb+srv://")));
+  return hasMongoUri();
 }
 
 export async function connectCrmMongo() {
-  const uri = process.env.MONGO_URI?.trim();
-  if (!uri || (!uri.startsWith("mongodb://") && !uri.startsWith("mongodb+srv://"))) return null;
-  if (!globalMongo.exnessCrmMongo) {
-    globalMongo.exnessCrmMongo = mongoose.connect(uri);
-  }
-  return globalMongo.exnessCrmMongo;
+  return connectMongoDB();
 }
 
 const walletSchema = {

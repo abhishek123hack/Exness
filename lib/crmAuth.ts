@@ -40,6 +40,11 @@ export function setAuthCookies(response: NextResponse, payload: AuthPayload, rem
   });
 }
 
+export function clearAuthCookies(response: NextResponse) {
+  response.cookies.set(accessCookie, "", { httpOnly: true, maxAge: 0, path: "/" });
+  response.cookies.set(refreshCookie, "", { httpOnly: true, maxAge: 0, path: "/" });
+}
+
 export function getAuthPayload(request: Request): AuthPayload | null {
   const cookie = request.headers.get("cookie") || "";
   const token = cookie

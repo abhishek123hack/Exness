@@ -629,7 +629,9 @@ export function CrmShell({ mode, page = "dashboard" }: { mode: Mode; page?: Page
 
   async function load(userId?: string) {
     const id = userId || loginUser?.id;
-    const res = await fetch(`/api/crm/state${id ? `?userId=${id}` : ""}`, { cache: "no-store" });
+    const params = new URLSearchParams({ mode, page });
+    if (id) params.set("userId", id);
+    const res = await fetch(`/api/crm/state?${params.toString()}`, { cache: "no-store" });
     const data = await res.json();
     setState(data);
     if (id && data.user) {
