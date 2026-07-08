@@ -102,7 +102,7 @@ export function AdminClientDetail({ clientId }: { clientId: string }) {
   return (
     <main className="min-h-screen bg-slate-100 text-slate-900">
       <aside className="fixed inset-y-0 left-0 hidden w-72 bg-[#0b1b33] text-white lg:block">
-        <div className="border-b border-white/10 p-5"><a href="/admin"><img src="/exness-global-logo.svg" alt="Exness Global CRM" className="h-14 w-auto" /></a><p className="mt-1 text-xs text-white/50">Client Details</p></div>
+        <div className="border-b border-white/10 p-5"><a href="/admin"><img src="/exness-global-logow.svg" alt="Exness Global CRM" className="h-14 w-auto" /></a><p className="mt-1 text-xs text-white/50">Client Details</p></div>
         <nav className="p-3"><a href="/admin/clients" className="mb-1 flex rounded bg-blue-600 px-4 py-3 text-sm font-medium text-white">Back to Clients</a><a href="/admin/deposits" className="mb-1 flex rounded px-4 py-3 text-sm font-medium text-white/70 hover:bg-white/10">Deposits</a><a href="/admin/withdrawals" className="mb-1 flex rounded px-4 py-3 text-sm font-medium text-white/70 hover:bg-white/10">Withdrawals</a></nav>
         <a href="/auth/login" className="absolute bottom-4 left-3 right-3 flex items-center gap-3 rounded px-4 py-3 text-sm text-white/60 hover:bg-white/10"><LogOut className="h-4 w-4" /> Logout</a>
       </aside>

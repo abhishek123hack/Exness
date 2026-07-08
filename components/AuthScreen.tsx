@@ -84,7 +84,7 @@ export function AuthScreen({ type }: { type: keyof typeof copy }) {
     <main className="grid min-h-screen place-items-center bg-[#050816] px-4 py-10 text-white">
       <section className="w-full max-w-md rounded border border-white/10 bg-[#0b1b33] shadow-lg">
         <div className="border-b border-white/10 bg-[#0b1b33] px-6 py-5 text-white">
-          <img src="/exness-global-logo.svg" alt="Exness Global CRM" className="h-14 w-auto" />
+          <img src="/exness-global-logow.svg" alt="Exness Global CRM" className="h-14 w-auto" />
           <p className="mt-1 text-sm text-white/60">{subtitle}</p>
         </div>
         <form onSubmit={submit} className="grid gap-4 p-6">
