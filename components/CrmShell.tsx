@@ -188,7 +188,7 @@ function ClientDashboard({ user, deposits, withdrawals }: { user: Omit<CrmUser, 
       {user.kycStatus !== "Approved" && (
         <section className="rounded border border-amber-300 bg-amber-50 p-5 text-amber-900 shadow-sm">
           <h2 className="text-lg font-bold">KYC Required</h2>
-          <p className="mt-1 text-sm">Deposit aur full CRM access ke liye pehle PAN KYC submit karein. Current status: <Badge value={user.kycStatus} /></p>
+          <p className="mt-1 text-sm">For Account activation complete your KYC. Current status: <Badge value={user.kycStatus} /></p>
           <a href="/client/kyc" className="mt-4 inline-block rounded bg-amber-600 px-4 py-2 text-sm font-semibold text-white">Complete KYC</a>
         </section>
       )}
@@ -286,7 +286,7 @@ function ClientDeposits({ user, state, reload }: { user: Omit<CrmUser, "password
     return (
       <section className="rounded border border-amber-300 bg-amber-50 p-6 text-amber-900 shadow-sm">
         <h2 className="text-xl font-bold">Deposit Page Locked</h2>
-        <p className="mt-2 text-sm">Jab tak client KYC submit karke admin se approve nahi karwata, tab tak deposit page locked rahega.</p>
+        <p className="mt-2 text-sm">For access this option first complete your KYC.</p>
         <div className="mt-4"><Badge value={`KYC ${user.kycStatus}`} /></div>
         <a href="/client/kyc" className="mt-5 inline-block rounded bg-amber-600 px-5 py-3 text-sm font-semibold text-white">Go to KYC Verification</a>
       </section>
@@ -441,7 +441,7 @@ function ClientKyc({ user, state, reload }: { user: Omit<CrmUser, "password">; s
 }
 
 function ClientTradingAccount({ user }: { user: Omit<CrmUser, "password"> }) {
-  if (!user.mt5Account) return <Empty text="Trading Account Pending: admin ne abhi MT5 Login ID, Password, Server, Leverage aur Account Type fill nahi kiya." />;
+  if (!user.mt5Account) return <Empty text="Not Available " />;
   return (
     <ShellTable headers={["MT5 Login ID", "Password", "Server Name", "Leverage", "Account Type", "Balance"]}>
       <tr className="border-t border-slate-100"><td className="px-5 py-4 font-semibold">{user.mt5Account.loginId}</td><td>{user.mt5Account.password}</td><td>{user.mt5Account.server}</td><td>{user.mt5Account.leverage}</td><td>{user.mt5Account.accountType}</td><td>{money(user.mt5Account.balance)}</td></tr>
