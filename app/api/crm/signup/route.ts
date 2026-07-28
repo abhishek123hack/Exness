@@ -10,7 +10,7 @@ export async function POST(request: Request) {
   const email = String(body.email || "").toLowerCase().trim();
   const password = String(body.password || "");
 
-  if (!body.fullName || !email || !body.phone || !body.country || !password) {
+  if (!body.fullName || !email || !body.phone || !body.city || !password) {
     return NextResponse.json({ message: "All signup fields are required." }, { status: 400 });
   }
 
@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     fullName: String(body.fullName).trim(),
     email,
     phone: String(body.phone).trim(),
-    country: String(body.country).trim(),
+    city: String(body.city).trim(),
     password: await bcrypt.hash(password, 12),
     role: "client",
     status: "Pending Approval",
