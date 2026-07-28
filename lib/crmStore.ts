@@ -347,6 +347,6 @@ export function publicUser(user: CrmUser) {
   return safeUser;
 }
 
-export function makeId(prefix: string) {
-  return `${prefix}-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
+export function makeId(prefix: string, listLength: number) {
+  return `${prefix}-${String(listLength + 1).padStart(4, "0")}`;
 }
