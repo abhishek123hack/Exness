@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     fullName: String(body.fullName).trim(),
     email,
     phone: String(body.phone).trim(),
-    State: String(body.country).trim(),
+    state: String(body.country).trim(),
     password: await bcrypt.hash(password, 12),
     role: "client",
     status: "Pending Approval",
