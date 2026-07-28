@@ -302,8 +302,10 @@ export async function saveCrmStoreAsync(store = getCrmStore()) {
       globalStore.exnessCrmStore = store;
       return;
     }
-  } catch {
-  }
+  } catch (err) {
+  console.error("Mongo Save Error:");
+  console.error(err);
+}
   try {
     saveCrmStore(store);
   } catch {
@@ -315,7 +317,8 @@ async function syncCollection(model: { deleteMany: Function; bulkWrite: Function
   const ids = items.map((item) => item.id);
   await model.deleteMany({ id: { $nin: ids } });
   if (items.length === 0) return;
-  await model.bulkWrite(
+  try {
+  const result = await model.bulkWrite(
     items.map((item) => ({
       updateOne: {
         filter: { id: item.id },
@@ -325,6 +328,12 @@ async function syncCollection(model: { deleteMany: Function; bulkWrite: Function
     })),
     { ordered: false }
   );
+
+  console.log("BulkWrite Success:", result);
+
+} catch (err) {
+  console.error("BulkWrite Error:");
+  console.error(err);
 }
 
 export function publicUser(user: CrmUser) {
