@@ -14,7 +14,7 @@ export async function POST(request: Request) {
   if (amount > user.wallet.main) return NextResponse.json({ message: "Insufficient main wallet balance." }, { status: 400 });
 
   const withdrawal = {
-    id: makeId("WDR", store.withdrawals.length),
+    id: makeId("WDR"),
     userId: user.id,
     amount,
     payoutMethod: String(body.payoutMethod || ""),
