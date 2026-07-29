@@ -36,7 +36,7 @@ export async function POST(request: Request) {
   }
 
   const kyc = {
-    id: makeId("KYC", store.kycDocuments.length),
+    id: makeId("KYC"),
     userId: user.id,
     panNumber: user.panDetails.panNumber,
     nameOnPan: user.panDetails.nameOnPan,
