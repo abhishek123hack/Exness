@@ -100,7 +100,7 @@ export async function PATCH(request: Request) {
     }
     if (type === "Bonus") user.wallet.bonus += amount;
     user.balance = user.wallet.main;
-    store.transactions.unshift({ id: makeId("TXN", store.transactions.length), userId: user.id, type, amount: type === "Debit" ? -amount : amount, note: String(body.note || "Admin adjustment"), status: "Approved", createdAt: new Date().toISOString() });
+    store.transactions.unshift({ id: makeId("TXN"), userId: user.id, type, amount: type === "Debit" ? -amount : amount, note: String(body.note || "Admin adjustment"), status: "Approved", createdAt: new Date().toISOString() });
     await saveCrmStoreAsync(store);
     return NextResponse.json({ message: `${type} saved.`, user: publicUser(user) });
   }
