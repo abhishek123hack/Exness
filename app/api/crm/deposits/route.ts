@@ -15,7 +15,7 @@ export async function POST(request: Request) {
   if (!amount || amount <= 0) return NextResponse.json({ message: "Valid amount is required." }, { status: 400 });
 
   const deposit = {
-    id: makeId("DEP", store.deposits.length),
+    id: makeId("DEP"),
     userId: user.id,
     method: body.method || "UPI",
     amount,
