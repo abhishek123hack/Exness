@@ -48,7 +48,7 @@ export async function PATCH(request: Request) {
       user.wallet.main += deposit.amount;
       user.wallet.totalDeposit += deposit.amount;
       user.balance = user.wallet.main;
-      store.transactions.unshift({ id: makeId("TXN", store.transactions.length), userId: user.id, type: "Deposit", amount: deposit.amount, note: deposit.adminComment ? `${deposit.method} - ${deposit.adminComment}` : deposit.method, status: "Approved", createdAt: new Date().toISOString() });
+      store.transactions.unshift({ id: makeId("TXN"), userId: user.id, type: "Deposit", amount: deposit.amount, note: deposit.adminComment ? `${deposit.method} - ${deposit.adminComment}` : deposit.method, status: "Approved", createdAt: new Date().toISOString() });
     }
     await saveCrmStoreAsync(store);
     return NextResponse.json({ message: `Deposit ${deposit.status}.`, deposit, user: publicUser(user) });
@@ -65,7 +65,7 @@ export async function PATCH(request: Request) {
       user.wallet.main -= withdrawal.amount;
       user.wallet.totalWithdrawal += withdrawal.amount;
       user.balance = user.wallet.main;
-      store.transactions.unshift({ id: makeId("TXN", store.transactions.length), userId: user.id, type: "Withdrawal", amount: withdrawal.amount, note: withdrawal.payoutMethod, status: body.status, createdAt: new Date().toISOString() });
+      store.transactions.unshift({ id: makeId("TXN"), userId: user.id, type: "Withdrawal", amount: withdrawal.amount, note: withdrawal.payoutMethod, status: body.status, createdAt: new Date().toISOString() });
     }
     await saveCrmStoreAsync(store);
     return NextResponse.json({ message: `Withdrawal ${withdrawal.status}.`, withdrawal, user: publicUser(user) });
